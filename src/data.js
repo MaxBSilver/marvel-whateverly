@@ -7,7 +7,7 @@ let marvelMovies = {
     stars: ['Chris Evans', 'Robert Downey Jr.', 'Sebtastian Stan', 'Paul Rudd', 'Elizabeth Olsen', 'Paul Bettany', 'Jeremy Renner', 'Scarlett Johansson', 'Anthony Mackie', 'Tom Holland'],
     imdbRating: 7.8,
     characters: ['Iron Man', 'Captain America', 'Bucky Barnes', 'Scarlet Witch', 'Spider-Man', 'Vision', 'Ant-Man', 'Hawkeye', 'Black Widow', 'Falcon'],
-    basedOn: ''
+    basedOn: ['Civil War']
   },
   logan: {
     title: 'Logan',
@@ -17,6 +17,7 @@ let marvelMovies = {
     stars: ['Hugh Jackman', 'Patrick Stewart'],
     imdbRating: 8.1,
     characters: ['Wolverine', 'X-23', 'Professor Xavier'],
+    basedOn: ['Old Man Logan']
   },
   avengers: {
     title: 'The Avengers',
@@ -26,7 +27,7 @@ let marvelMovies = {
     stars: ['Chris Evans', 'Robert Downey Jr.', 'Scarlett Johansson', 'Chris Hemsworth', 'Samuel L. Jackson', 'Tom Hiddleston', 'Mark Ruffalo', 'Jeremy Renner'],
     imdbRating: 8.1,
     characters: ['Captain America', 'Iron Man', 'Black Widow', 'Thor', 'Nick Fury', 'Loki', 'Hulk', 'Hawkeye'],
-    basedOn: ''
+    basedOn: ['The New Avengers']
   },
   ragnarok: {
     title: 'Thor Ragnarok',
@@ -36,7 +37,7 @@ let marvelMovies = {
     stars: ['Chris Hemsworth', 'Tom Hiddleston', 'Mark Ruffalo', 'Cate Blanchett', 'Jeff Goldblum', 'Anthony Hopkins', 'Taika Waititi'],
     imdbRating: 7.9,
     characters: ['Thor', 'Loki', 'Hulk', 'Valkyrie', 'Hela', 'Surtur', 'Grandmaster', 'Odin', 'Korg', 'Miek'],
-    basedOn: ''
+    basedOn: ['Ragnarok', 'Unworthy Thor', 'Planet Hulk']
   },
   blackPanther: {
     title: 'Black Panther',
@@ -46,7 +47,7 @@ let marvelMovies = {
     stars: ['Chadwick Boseman', 'Michael B. Jordan', 'Lupita Nyong\'o', 'Martin Freeman', 'Danai Gurira', 'Angela Bassett', 'Winston Duke', 'Leticia Wright', 'Daniel Kaluuya'],
     imdbRating: 7.3,
     characters: ['Black Panther', 'Shuri', 'M\'Baku', 'Okoye', 'Killmonger', 'Nakia'],
-    basedOn: ''
+    basedOn: ['Jungle Action Vol. 2 #6']
   },
   doctorStrange: {
     title: 'Doctor Strange',
@@ -56,7 +57,7 @@ let marvelMovies = {
     stars: ['Benedict Cumberbatch', 'Chiwetel Ejiofor', 'Rachel McAdams', 'Benedict Wong', 'Mads Mikkelsen', 'Tilda Swinton'],
     imdbRating: 7.5,
     characters: ['Doctor Stephen Strange', 'Ancient One', 'Karl Mordo', 'Wong'],
-    basedOn: ''
+    basedOn: ['Strange Tales #115']
   },
   antman: {
     title: 'Ant-Man',
@@ -66,7 +67,7 @@ let marvelMovies = {
     stars: ['Paul Rudd', 'Evageline Lilly', 'Michael Peña', 'Tip \'T.I.\' Harris', 'Anthony Mackie'],
     imdbRating: 7.3,
     characters: ['Ant-Man', 'Wasp', 'Hank Pym', 'Yellow Jacket', 'Falcon'],
-    basedOn: ''
+    basedOn: ['Marvel Premiere Vol 1 #47']
   },
   captainMarvel: {
     title: 'Captain Marvel',
@@ -76,7 +77,7 @@ let marvelMovies = {
     stars: ['Brie Larson', 'Samuel L. Jackson','Ben Mendelsohn', 'Lee Pace', 'Clark Gregg'],
     imdbRating: 7.2,
     characters: ['Captain Marvel', 'Nick Fury', 'Talos', 'Korath', 'Phil Coulson', 'Ronan'],
-    basedOn: ''
+    basedOn: ['Captain Marvel Vol. 7 #1']
   },
   spiderman: {
     title: 'Spider-Man: Homecoming',
@@ -86,7 +87,7 @@ let marvelMovies = {
     stars: ['Tom Holland', 'Michael Keaton', 'Jon Favreau', 'Donald Glover', 'Robert Downey Jr.'],
     imdbRating: 7.5,
     characters: ['Spider-Man', 'Iron Man', 'Vulture'],
-    basedOn: ''
+    basedOn: ['Ultimate Spider-Man']
   },
   xmen: {
     title: 'X2',
@@ -96,7 +97,7 @@ let marvelMovies = {
     stars: ['Hugh Jackman', 'Patrick Stewart', 'Ian McKellen', 'Halle Berry', 'James Marsden', 'Anna Paquin', 'Alan Cumming', 'Famke Janssen'],
     imdbRating: 7.5,
     characters: ['Wolverine', 'Professor Xavier', 'Magneto', 'Storm', 'Jean Grey', 'Cyclops', 'Rogue', 'Mystique', 'Nightcrawler'],
-    basedOn: ''
+    basedOn: ['Marvel Graphic Novel Vol 1 #5', 'Ultimate X-Men Vol 1 #7']
   },
   deadpool: {
     title: 'Deadpool',
@@ -106,17 +107,17 @@ let marvelMovies = {
     stars: ['Ryan Reynolds', 'Morena Baccarin', 'T.J. Miller', 'Ed Skrein', 'Brianna Hildebrand'],
     imdbRating: 8,
     characters: ['Deadpool', 'Negasonic Teenage Warhead', 'Ajax', 'Colossus'],
-    basedOn: ''
+    basedOn: ['Deadpool Vol. 1 #1']
   },
   guardians: {
-    title: '',
+    title: 'Guardians of the Galaxy',
     releaseYear: 2014,
     directors: ['James Gunn'],
     rating: 'PG13',
     stars: ['Chris Pratt', 'Zoe Saldana', 'Dave Bautista', 'Vin Diesel', 'Bradley Cooper', 'Lee Pace', 'Michael Rooker', 'Karen Gillian'],
     imdbRating: 8.1,
     characters: ['Star-Lord', 'Gamora', 'Groot', 'Rocket Raccoon', 'Drax', 'Nebula', 'Ronan', 'Yondu'],
-    basedOn: ''
+    basedOn: ['Annihilation: Conquest']
   },
   infinityWar: {
   title: 'Avengers: Infinty War',
@@ -126,7 +127,7 @@ let marvelMovies = {
   stars: ['Robert Downey Jr.', 'Chris Hemsworth', 'Chris Evans', 'Josh Brolin', 'Mark Ruffalo', 'Scarlett Johansson', 'Don Cheadle', 'Benedict Cumberbatch', 'Tom Holland', 'Chadwick Boseman', 'Zoe Saldana', 'Tom Hiddleston', 'Anthony Mackie', 'Karen Gillian', 'Chris Pratt', 'Dave Bautista', 'Sebastian Stan', 'Elizabeth Olsen', 'Bradley Cooper', 'Samuel L. Jackson', 'Jeremy Renner'],
   imdbRating: 8.5,
   characters: ['Iron Man', 'Captain America', 'Thor', 'Thanos', 'Hulk', 'Black Widow', 'War Machine', 'Doctor Strange', 'Spider-Man', 'Black Panther', 'Gamora', 'Loki', 'Falcon', 'Gamora', 'Star-Lord', 'Drax', 'Bucky Barnes', 'Scarlet Witch', 'Rocket Raccoon', 'Nick Fury', 'Hawkeye'],
-  basedOn: ''
+  basedOn: ['The Infinity Gauntlet']
   },
 }
 
