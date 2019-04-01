@@ -1,5 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## DTR
+- Work Schedule: M-F: 4-7PM
+- Commit/Branch Schedule: 3-5 commits per branch, commits should be small, accompanying pictures for any major functional changes
+- Use github workflow with issues
+- CSS must be written with SASS
+
 ## Available Scripts
 
 In the project directory, you can run:
