@@ -182,7 +182,7 @@ let marvelMovies = {
   "img": "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SY1000_CR0,0,674,1000_AL_.jpg",
   "id": 13,
   "favorite": false
-  },
+  }
 }
 
 const marvelComics = {
