@@ -363,7 +363,9 @@ const marvelComics = {
     editors: ['Stan Lee'],
     mainCharacters: ['Iron Man'],
     adapted: true,
-    summary: 'Tony Stark is captured after getting injured and his captors attempt to force him to develop tech for them. He resists and creates a metal suit for himself to keep the shrapnel in his chest from puncturing his heart and escapes into the jungle.'
+    summary: 'Tony Stark is captured after getting injured and his captors attempt to force him to develop tech for them. He resists and creates a metal suit for himself to keep the shrapnel in his chest from puncturing his heart and escapes into the jungle.',
+    link: "https://marvel.fandom.com/wiki/Tales_of_Suspense_Vol_1_39",
+    img: "https://vignette.wikia.nocookie.net/marveldatabase/images/e/ec/Tales_of_Suspense_Vol_1_39.jpg/revision/latest/scale-to-width-down/300?cb=20171107013333"
   },
   strangeTales: {
     title: 'Strange Tales Vol. 1 #110 "Doctor Strange Master of Black Magic"',
@@ -376,7 +378,9 @@ const marvelComics = {
     editors: ['Stan Lee'],
     mainCharacters: ['Doctor Strange', 'Ancient One'],
     adapted: false,
-    summary: 'The first appearance of Doctor Strange, a wizard who can travel through dreams, and does so to get a man to confess his crimes.'
+    summary: 'The first appearance of Doctor Strange, a wizard who can travel through dreams, and does so to get a man to confess his crimes.',
+    link: "https://marvel.fandom.com/wiki/Strange_Tales_Vol_1_110",
+    img: "https://vignette.wikia.nocookie.net/marveldatabase/images/3/3e/Strange_Tales_Vol_1_110.jpg/revision/latest/scale-to-width-down/300?cb=20171225224240"
   },
   incredibleHulk: {
     title: 'Incredible Hulk Vol. 1 #181 "And Now..the Wolverine!"',
@@ -389,7 +393,9 @@ const marvelComics = {
     editors: ['Roy Thomas'],
     mainCharacters: ['Hulk', 'Wolverine'],
     adapted: false,
-    summary: 'The first appearance of Wolverine, as he and Hulk fight in what will become an infamous showdown between the two.'
+    summary: 'The first appearance of Wolverine, as he and Hulk fight in what will become an infamous showdown between the two.',
+    link: "https://marvel.fandom.com/wiki/Incredible_Hulk_Vol_1_181",
+    img: "https://vignette.wikia.nocookie.net/marveldatabase/images/a/a9/Incredible_Hulk_Vol_1_181.jpg/revision/latest/scale-to-width-down/300?cb=20180402002312"
   },
   blackWidow: {
     title: 'Tales of Suspense Vol. 1 #52 "The Crimson Dynamo Strikes Again!"',
@@ -402,7 +408,9 @@ const marvelComics = {
     editors: ['Stan Lee'],
     mainCharacters: ['Black Widow', 'Iron Man', 'Crimson Dynamo'],
     adapted: false,
-    summary: 'In the first appearance of secret agent Black Widow, Tony Stark, or Iron Man, is her target, but after a fight in his factory, she escapes and is on the run.'
+    summary: 'In the first appearance of secret agent Black Widow, Tony Stark, or Iron Man, is her target, but after a fight in his factory, she escapes and is on the run.',
+    link: "https://marvel.fandom.com/wiki/Tales_of_Suspense_Vol_1_52",
+    img: "https://vignette.wikia.nocookie.net/marveldatabase/images/6/60/Tales_of_Suspense_Vol_1_52.jpg/revision/latest/scale-to-width-down/300?cb=20171222050410"
   },
   blackPanther: {
     title: 'Fantastic Four Vol. 1 #52 "The Black Panther!"',
@@ -415,7 +423,9 @@ const marvelComics = {
     editors: ['Stan Lee'],
     mainCharacters: ['Black Panther', 'Mister Fantastic', 'Invisible Girl', 'Human Torch', 'Thing'],
     adapted: false,
-    summary: 'The Fanstastic Four are given a spacecraft by Wakanda and visit the mysterious country, then meet their leader, T\'Challla.'
+    summary: 'The Fanstastic Four are given a spacecraft by Wakanda and visit the mysterious country, then meet their leader, T\'Challla.',
+    link: "https://marvel.fandom.com/wiki/Fantastic_Four_Vol_1_52",
+    img: "https://vignette.wikia.nocookie.net/marveldatabase/images/a/a2/Fantastic_Four_Vol_1_52.jpg/revision/latest/scale-to-width-down/300?cb=20180126032018"
   },
   talesToAstonish: {
     title: 'Tales to Astonish Vol. 1 #35 "Return of the Ant-Man"',
@@ -428,7 +438,9 @@ const marvelComics = {
     editors: ['Stan Lee'],
     mainCharacters: ['Ant-Man'],
     adapted: false,
-    summary: 'Doctor Hank Pym has created a serum that allows him to become the size of ants and a second serum that allows him to regain his original size. Secret agents attempt to steal the serum from him but he refuses and decides the only way to keep people from stealing it is to use it.'
+    summary: 'Doctor Hank Pym has created a serum that allows him to become the size of ants and a second serum that allows him to regain his original size. Secret agents attempt to steal the serum from him but he refuses and decides the only way to keep people from stealing it is to use it.',
+    link: "https://marvel.fandom.com/wiki/Tales_to_Astonish_Vol_1_35",
+    img: "https://vignette.wikia.nocookie.net/marveldatabase/images/9/90/Tales_to_Astonish_Vol_1_35.png/revision/latest/scale-to-width-down/300?cb=20160118030840"
   },
   invincibleIronMan: {
     title: 'Iron Man Vol. 1 #55 "Beware the ... Blood Brothers!"',
@@ -441,7 +453,9 @@ const marvelComics = {
     editors: ['Roy Thomas'],
     mainCharacters: ['Iron Man', 'Drax the Destroyer', 'Thanos'],
     adapted: false,
-    summary: 'In the first appearance of Thanos and Drax, Iron Man and Drax team up to fight Thanos and the Blood Brothers but Thanos escapes leaving a robot in his place.'
+    summary: 'In the first appearance of Thanos and Drax, Iron Man and Drax team up to fight Thanos and the Blood Brothers but Thanos escapes leaving a robot in his place.',
+    link: "https://marvel.fandom.com/wiki/Iron_Man_Vol_1_55",
+    img: "https://vignette.wikia.nocookie.net/marveldatabase/images/d/dd/Iron_Man_Vol_1_55.jpg/revision/latest/scale-to-width-down/300?cb=20171223062502"
   },
   guardians: {
     title: 'Annihilation: Conquest - Starlord Vol. 1 #6 "Last Stand"',
@@ -454,7 +468,9 @@ const marvelComics = {
     editors: ['Bill Rosenann'],
     mainCharacters: ['Nova', 'Star-Lord', 'Adam Warlock', 'Ronan', 'Gamora', 'Drax', 'Warlock', 'Mantis', 'Rocket Raccoon', 'Groot'],
     adapted: true,
-    summary: 'The rag-tag group of heroes bands together to fight Ultron with the fate of Earth and the Kree empire on the line.'
+    summary: 'The rag-tag group of heroes bands together to fight Ultron with the fate of Earth and the Kree empire on the line.',
+    link: "https://marvel.fandom.com/wiki/Annihilation:_Conquest_Vol_1_6",
+    img: "https://vignette.wikia.nocookie.net/marveldatabase/images/5/5f/Annihilation_Conquest_Vol_1_6.jpg/revision/latest/scale-to-width-down/300?cb=20140429051007"
   },
   funeralForAFreak: {
     title: 'Deadpool Vol. 1 #61 "Funeral for a Freak, Part 1: \'Nuff Said!"',
@@ -467,7 +483,9 @@ const marvelComics = {
     editors: ['Mike Marts', 'Mike Raicht'],
     mainCharacters: ['Deadpool', 'Death', 'Wolverine', 'Cable', 'Black Panther'],
     adapted: false,
-    summary: 'Wolverine must organize Deadpool a funeral.'
+    summary: 'Wolverine must organize Deadpool a funeral.',
+    link: "https://marvel.fandom.com/wiki/Deadpool_Vol_1_61",
+    img: "https://vignette.wikia.nocookie.net/marveldatabase/images/6/67/Deadpool_Vol_1_61.jpg/revision/latest/scale-to-width-down/300?cb=20071103032232"
   },
   amazingSpiderman: {
     title: 'Amazing Spider-Man Vol. 1 #2 "Duel to the Death with the Vulture!"',
@@ -480,7 +498,9 @@ const marvelComics = {
     editors: ['Stan Lee'],
     mainCharacters: ['Spider-Man', 'Vulture', 'Aunt May'],
     adapted: true,
-    summary: 'There\'s a new criminal in town and his name is Vulture. No one can catch this guy, but Peter Parker decides to try it and gets caught.'
+    summary: 'There\'s a new criminal in town and his name is Vulture. No one can catch this guy, but Peter Parker decides to try it and gets caught.',
+    link: "https://marvel.fandom.com/wiki/Amazing_Spider-Man_Vol_1_2",
+    img: "https://vignette.wikia.nocookie.net/marveldatabase/images/c/c7/Amazing_Spider-Man_Vol_1_2.jpg/revision/latest/scale-to-width-down/300?cb=20170406023749"
   },
   defenders: {
     title: 'Marvel Feature Vol. 1 #1 "The Day of the Defenders!"',
@@ -493,7 +513,9 @@ const marvelComics = {
     editors: ['Stan Lee'],
     mainCharacters: ['Doctor Strange', 'Hulk', 'Wong', 'Silver Surfer'],
     adapted: false,
-    summary: 'In the first appearance of the Defenders, Doctor Strange and Hulk attempt to destory the Omegatron before it destroys the planet. When the threat is postponed, Doctor Strange suggests they stay united as a team and called themselved the Defenders.'
+    summary: 'In the first appearance of the Defenders, Doctor Strange and Hulk attempt to destory the Omegatron before it destroys the planet. When the threat is postponed, Doctor Strange suggests they stay united as a team and called themselved the Defenders.',
+    link: "https://marvel.fandom.com/wiki/Marvel_Feature_Vol_1_1",
+    img: "https://vignette.wikia.nocookie.net/marveldatabase/images/3/30/Marvel_Feature_Vol_1_1.jpg/revision/latest/scale-to-width-down/300?cb=20080724123652"
   },
   uncannyXmen: {
     title: 'Uncanny X-Men Vol. 1 #266 "Gambit: Out of the Frying Pan"',
@@ -506,7 +528,9 @@ const marvelComics = {
     editors: ['Bob Harras'],
     mainCharacters: ['Gambit', 'Mystique', 'Storm'],
     adapted: false,
-    summary: 'Storm runs into a new mutant with cosmic card throwing powers who calls himself Gambit while she\'s on the run during an attempt to steal back already stolen paintings.'
+    summary: 'Storm runs into a new mutant with cosmic card throwing powers who calls himself Gambit while she\'s on the run during an attempt to steal back already stolen paintings.',
+    link: "https://marvel.fandom.com/wiki/Uncanny_X-Men_Vol_1_266",
+    img: "https://vignette.wikia.nocookie.net/marveldatabase/images/d/de/Uncanny_X-Men_Vol_1_266.jpg/revision/latest/scale-to-width-down/300?cb=20091105232323"
   },
   xFactor: {
     title: 'X-Factor Vol. 1 #15 "Whose Death is it, Anyway?"',
@@ -519,7 +543,9 @@ const marvelComics = {
     editors: ['Robert Harras'],
     mainCharacters: ['Cyclops', 'Jean Grey', 'Beast', 'Angel', 'Iceman', 'Apocalypse', 'War', 'Pestilence', 'Famine'],
     adapted: false,
-    summary: 'Cyclops deals with the aftermath of the death of his family meanwhile Apocalypse has gotten his Horsemen ready to destroy New York City.'
+    summary: 'Cyclops deals with the aftermath of the death of his family meanwhile Apocalypse has gotten his Horsemen ready to destroy New York City.',
+    link: "https://marvel.fandom.com/wiki/X-Factor_Vol_1_15",
+    img: "https://vignette.wikia.nocookie.net/marveldatabase/images/b/bc/X-Factor_Vol_1_15.jpg/revision/latest/scale-to-width-down/300?cb=20181231020801"
   }
 } 
 
