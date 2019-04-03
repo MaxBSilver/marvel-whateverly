@@ -26,7 +26,7 @@ class App extends Component {
       .then(() => this.setState({ combined: Object.values(this.state.movies.movies).concat(Object.values(this.state.comics.comics)) }))
   }
   storeRendered = (media) => {
-    this.state.rendered.push(media)
+    this.setState({rendered : media})
   }
   render() {
     if (!this.state.movies || !this.state.comics){
@@ -37,7 +37,7 @@ class App extends Component {
         <Header {...this.state} storeRendered={this.storeRendered} />
         {/* <Banner movies={this.state.movies} comics={this.state.comics}/> */}
         {/* <Banner {...this.state}/> */}
-        {/* <CardContainer movies={this.state.movies} comics={this.state.comics}/> */}
+        {/* <CardContainer rendered={this.state.rendered}/> */}
       </div>
     );
   }
