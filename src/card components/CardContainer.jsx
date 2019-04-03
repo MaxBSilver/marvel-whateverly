@@ -6,7 +6,7 @@ export class CardContainer extends Component {
     super(props);
     this.state = {
       toggleInfo: true,
-      allCards: Object.values(props.movies.movies).concat(Object.values(props.comics.comics)).sort(() => .5 - Math.random())
+      // allCards: Object.values(props.movies.movies).concat(Object.values(props.comics.comics)).sort(() => .5 - Math.random())
     }
   }
 
