@@ -24,7 +24,7 @@ export class Search extends Component {
       }).join('')) ?
       item : false
     })
-    console.log(a)
+    this.props.storeRendered(a);
   }
 
   render() {

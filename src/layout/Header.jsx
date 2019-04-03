@@ -12,7 +12,7 @@ export default class Header extends Component {
   render() {
     return (
       <header>
-        <Search data ={this.props.combined}/>
+        <Search data ={this.props.combined} storeRendered={this.props.storeRendered}/>
       </header>
     )
   }
