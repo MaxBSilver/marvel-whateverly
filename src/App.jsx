@@ -2,16 +2,15 @@ import React, { Component } from 'react';
 import './App.scss';
 import Banner from './components/Banner';
 import Header from './layout/Header';
-import Card from './card components/Card';
+import CardContainer from './card components/CardContainer';
 
 class App extends Component {
   constructor(){
-    super()
-      this.state = {
-        movies: [],
-        comics: [],
-        isLoading: true
-      }
+    super();
+    this.state = {
+      movies: null,
+      comics: null
+    };
   }
   
   componentDidMount = () => {
@@ -21,21 +20,19 @@ class App extends Component {
 
      fetch('https://gist.githubusercontent.com/MaxBSilver/945de3d62ec3e047cb29662d7eb0a6af/raw/28f2305090bbfe310ac906e07d00ae761f4e0107/marvel-comics.json')
       .then(res => res.json())
-      .then(comics => {
-        this.setState({comics})
-        this.setState({isLoading: false});
-      })
+      .then(comics => this.setState({comics}))
   }
 
   render() {
-    return this.state.isLoading === true
-    ? (<div></div>)
-    : (
+    if (!this.state.movies || !this.state.comics){
+      return <div/>
+    }
+    return (
       <div className="App">
-        <Header />
+        {/* <Header /> */}
         {/* <Banner movies={this.state.movies} comics={this.state.comics}/> */}
-        <Banner {...this.state}/>
-
+        {/* <Banner {...this.state}/> */}
+        <CardContainer movies={this.state.movies} comics={this.state.comics}/>
       </div>
     );
   }

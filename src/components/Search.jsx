@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Card from '../card components/Card'
 export class Search extends Component {
   constructor(props) {
     super(props);
@@ -10,7 +9,7 @@ export class Search extends Component {
   }
   render() {
     return (
-      <Card movies={this.props.movies} comics={this.props.comics}/>
+      <div></div>
     )
   }
 }
