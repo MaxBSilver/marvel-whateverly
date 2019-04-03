@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import ShowLessCard from './ShowLessCard';
-import ShowMoreCard from './ShowMoreCard';
-export class Card extends Component {
+
+import React, { Component } from 'react'
+export class ShowMoreCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -9,19 +8,22 @@ export class Card extends Component {
     }
   }
 
-  handleChange = event => {
+  showCardInfo = event => {
     this.setState({toggleInfo: !this.state.toggleInfo})
   }
 
   render() {
-    const {movies, comics} = this.props;
-    console.log('banner: ', this.props.movies)
     return (
-      <article className="cardContainer">
-        <ShowMoreCard movies={movies} comics={comics}/>
-      </article>
+      (<article>
+        <h3>{this.props.card.title}</h3>
+        <img src={this.props.card.img} 
+          alt={`${this.props.card.title}`} 
+          width="200px"
+          onClick={this.showCardInfo}/>
+        { this.state.toggleInfo && <div>{this.props.card.link}</div> }
+      </article>)
     )
   }
 }
 
-export default Card
+export default ShowMoreCard
