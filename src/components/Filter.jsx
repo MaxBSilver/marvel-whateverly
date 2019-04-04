@@ -63,7 +63,8 @@ export class Filter extends Component {
       case this.state.movies:
       return (
             <div>
-            <select>Filter by...
+            <select>
+              <option selected="selected">--Filter by--</option>
             {dropDownMovies}
             </select>
             </div>
@@ -72,7 +73,8 @@ export class Filter extends Component {
       case this.state.comics:
       return (
         <div>
-        <select>Filter by...
+        <select>
+          <option selected="selected">--Filter by--</option>
         {dropDownComics}
         </select>
         </div>
