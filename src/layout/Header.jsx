@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Search from '../components/Search';
+import Filter from '../components/Filter'
 
 export default class Header extends Component {
   constructor(props) {
@@ -11,8 +12,9 @@ export default class Header extends Component {
 
   render() {
     return (
-      <header>
+      <header className='Header'>
         <Search data ={this.props.combined}/>
+        <Filter comics={this.props.comics} movies={this.props.movies}/>
       </header>
     )
   }
