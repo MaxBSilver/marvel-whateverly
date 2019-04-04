@@ -9,20 +9,29 @@ class App extends Component {
     this.state = {
       movies: null,
       comics: null,
-      combined: null,
+      combined: [],
       rendered: [],
     };
   }
   
   componentDidMount = () => {
-     fetch('https://gist.githubusercontent.com/MaxBSilver/bc1994851ccc283835a07735b0034201/raw/ce0cae47d5efaddffe35141aa2fe0d02f894e17f/marvel-movies.json')
+    fetch('https://fe-apps.herokuapp.com/api/v1/whateverly/1901/raechelo/marvelMovies')
       .then(res => res.json())
-      .then(movies => this.setState({ movies }))
+      .then(movies => this.setState({ movies: movies.marvelMovies }))
+      .catch(err => { throw new Error(err) })
 
-     fetch('https://gist.githubusercontent.com/MaxBSilver/945de3d62ec3e047cb29662d7eb0a6af/raw/28f2305090bbfe310ac906e07d00ae761f4e0107/marvel-comics.json')
+    fetch('https://fe-apps.herokuapp.com/api/v1/whateverly/1901/raechelo/marvelComics')
       .then(res => res.json())
-      .then(comics => this.setState({ comics }))
-      .then(() => this.setState({ combined: Object.values(this.state.movies.movies).concat(Object.values(this.state.comics.comics)) }))
+      .then(comics => this.setState({ comics: comics.marvelComics }))
+      .then(() => {
+        this.combineData()
+      })
+      .catch(err => { throw new Error(err) })
+  }
+
+  combineData = () => {
+    this.setState({ combined: Object.values(this.state.movies).concat(Object.values(this.state.comics)) },
+    this.componentDidMount)
   }
 
   render() {
