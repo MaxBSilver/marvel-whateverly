@@ -1,11 +1,20 @@
 import React, { Component } from 'react'
 
 export class Filter extends Component {
+  constructor() {
+    super();
+    this.state = {
+
+    }
+  }
+
+  
   render() {
     return (
-      <div>
-        
-      </div>
+      <form>
+        <button>Comics</button>
+        <button>Movies</button>
+      </form>
     )
   }
 }

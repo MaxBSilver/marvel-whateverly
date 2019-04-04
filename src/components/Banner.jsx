@@ -11,7 +11,9 @@ export class Banner extends Component {
   render() {
     console.log(this.props)
     return (
-      <div></div>
+      <section className="banner-title">
+        <h1>MARVELOUSLY</h1>
+      </section>
     )
   }
 }
