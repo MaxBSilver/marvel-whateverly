@@ -54,17 +54,17 @@ export class Filter extends Component {
 
     let val = Object.values(this.props.movies)
     let dropDownMovies = Object.keys(val).map(v => {
-    return (<option>{v}</option>)})
+    return (<option value={v}>{v}</option>)})
     let com = Object.values(this.props.comics)
     let dropDownComics = Object.keys(com).map(v => {
-    return (<option>{v}</option>)})
+    return (<option value={v}>{v}</option>)})
               
     switch(true) {
       case this.state.movies:
       return (
             <div>
             <select>
-              <option selected="selected">--Filter by--</option>
+              <option value="" selected="selected">--Filter by--</option>
             {dropDownMovies}
             </select>
             </div>
@@ -74,7 +74,7 @@ export class Filter extends Component {
       return (
         <div>
         <select>
-          <option selected="selected">--Filter by--</option>
+          <option value="" selected="selected">--Filter by--</option>
         {dropDownComics}
         </select>
         </div>
