@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.scss';
 import Banner from './components/Banner';
 import Header from './layout/Header';
 import CardContainer from './card components/CardContainer';
@@ -32,6 +31,7 @@ class App extends Component {
     }
     return (
       <div className="App">
+        <Banner />
         <Header {...this.state} />
         {/* <Banner movies={this.state.movies} comics={this.state.comics}/> */}
         {/* <Banner {...this.state}/> */}
