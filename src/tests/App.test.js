@@ -14,7 +14,7 @@ describe('App', () => {
   });
 
   it('should have a proper default state', () => {
-    expect(wrapper.state()).toEqual( {movies: null, comics: null, combined: null, rendered: []} )
+    expect(wrapper.state()).toEqual( {movies: [], comics: [], combined: [], rendered: []} )
   });
 
   it('should match the snapshot with all the data passed in', () => {
