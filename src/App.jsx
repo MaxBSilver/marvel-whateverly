@@ -30,8 +30,7 @@ class App extends Component {
   }
 
   combineData = () => {
-    this.setState({ combined: Object.values(this.state.movies).concat(Object.values(this.state.comics)) },
-    this.componentDidMount)
+    this.setState({ combined: Object.values(this.state.movies).concat(Object.values(this.state.comics)) })
   }
 
   render() {
