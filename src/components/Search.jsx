@@ -11,20 +11,29 @@ export class Search extends Component {
     this.setState({ value: e.target.value })
   }
 
+  rmSpecChars(word) {
+    return word.split('').filter((ltr) => {
+      return !["'", " ", "-", ",", ":", "#", ".", "!", "?"].includes(ltr)
+    }).join('')
+  }
+
+  finder(words) {
+    return this.props.data.filter((item) => { 
+      let reduced = item.title.toUpperCase().split(' ').reduce((acc, word) => {
+          acc.push(this.rmSpecChars(word))
+        return acc;
+      }, [])
+      return reduced.some(keyWord => words.includes(keyWord));
+   })
+  }
+
   handleSubmit = e => {
     e.preventDefault()
-    const specChars = ["'", " ", "-", ",", ":", "#", ".", "!", "?"]
-    let userInput = this.state.value.toUpperCase().split('').filter((ltr) => {
-      return !specChars.includes(ltr)
-    }).join('')
-    console.log(userInput)
-    let a = this.props.data.filter((item) => {
-      return userInput.match(item.title.toUpperCase().split('').filter((ltr) => {
-        return !specChars.includes(ltr)
-      }).join('')) ?
-      item : false
-    })
-    this.props.storeRendered(a);
+    let userInput = this.state.value.split(' ').length > 1 
+      ? this.state.value.toUpperCase().split(' ').map(word => this.rmSpecChars(word))
+      : [this.rmSpecChars(this.state.value.toUpperCase())]
+    let result = this.finder(userInput);
+    this.props.storeRendered(result)
   }
 
   render() {
