@@ -13,7 +13,7 @@ export default class Header extends Component {
   render() {
     return (
       <header className='Header'>
-        <Search data ={this.props.combined}/>
+        <Search data ={this.props.combined} storeRendered={this.props.storeRendered}/>
         <Filter rendered={this.props.rendered} comics={this.props.comics} movies={this.props.movies}/>
       </header>
     )
