@@ -15,7 +15,7 @@ export class Filter extends Component {
       ? this.setState({comics: !this.state.comics})
       : this.setState({movies: false})
     if (this.state.movies) this.setState({movies: false});
-    this.props.rendered.push(...[this.props.comics])
+    this.props.storeRendered(...[Object.values(this.props.comics)])
   }
 
   handleMovies = e => {
@@ -24,17 +24,17 @@ export class Filter extends Component {
       ? this.setState({movies: !this.state.movies})
       : this.setState({comics: false})
     if (this.state.comics) this.setState({comics: false});
-    this.props.rendered.push(...[this.props.movies])
+    this.props.storeRendered(...[Object.values(this.props.movies)])
   }
 
   
   render() {
-
-    let val = this.props.movies['deadpool']
-    // let dropDownMovies = Object.keys(val).map(v => (<option value={v}>{v}</option>))
+    let mov = this.props.movies['deadpool']
+    // let val = Object.values(this.props.movies)
+    // let dropDownMovies = Object.keys(val).map(v => {
+    // return (<option value={v}>{v}</option>)})
     let com = this.props.comics['civilWar']
-    // let comKeys = Object.keys(com[0])
-    // let dropDownComics = comKeys.map(v => {
+    // let dropDownComics = Object.keys(com).map(v => {
     // return (<option value={v}>{v}</option>)})
               
     switch(true) {
@@ -43,21 +43,19 @@ export class Filter extends Component {
             <div>
             <select>
               <option value="" selected="selected">--Filter by--</option>
-            {Object.keys(val).map(v => (<option value={v}>{v.split(' ')}</option>))}
+            {Object.keys(mov).map(m => (<option value={m}>{m}</option>))}
             </select>
             </div>
             )
-      break;
       case this.state.comics:
       return (
         <div>
         <select>
           <option value="" selected="selected">--Filter by--</option>
-        {Object.keys(com).map(v => (<option value={v}>{v.split(' ')}</option>))}
+          {Object.keys(com).map(c => (<option value={c}>{c}</option>))}
         </select>
         </div>
         )
-      break;
       default:
       // return false
     

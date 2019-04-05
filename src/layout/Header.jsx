@@ -14,7 +14,7 @@ export default class Header extends Component {
     return (
       <header className='Header'>
         <Search data ={this.props.combined} storeRendered={this.props.storeRendered}/>
-        <Filter rendered={this.props.rendered} comics={this.props.comics} movies={this.props.movies}/>
+        <Filter storeRendered={this.props.storeRendered} comics={this.props.comics} movies={this.props.movies}/>
       </header>
     )
   }
