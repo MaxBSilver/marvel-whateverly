@@ -26,14 +26,70 @@ export class Filter extends Component {
     if (this.state.comics) this.setState({comics: false});
     this.props.rendered.push(...[this.props.movies])
   }
+
+  // object.values over current movies/comics, index 0
+  // object.keys over that and map into a dropdown
+
+  // filterData = () => {
+  //   let val = Object.values(this.props.movies)
+  //   val[0].map(v => {
+  //     return <option>{v}</option>
+  //   })
+  // }
+
+  // switch(true) {
+  //   case this.state.movies:
+  //   Object.values(this.props.movies)
+  //     val[0].map(v => {
+  //       return <option>{v}</option>
+  //     })
+  //     break;
+  //   case this.state.comics:
+  //     break;
+  //   default:
+  // }
+
   
   render() {
-    return (
+
+    let val = Object.values(this.props.movies)
+    let dropDownMovies = Object.keys(val).map(v => {
+    return (<option value={v}>{v}</option>)})
+    let com = Object.values(this.props.comics)
+    let dropDownComics = Object.keys(com).map(v => {
+    return (<option value={v}>{v}</option>)})
+              
+    switch(true) {
+      case this.state.movies:
+      return (
+            <div>
+            <select>
+              <option value="" selected="selected">--Filter by--</option>
+            {dropDownMovies}
+            </select>
+            </div>
+            )
+      break;
+      case this.state.comics:
+      return (
+        <div>
+        <select>
+          <option value="" selected="selected">--Filter by--</option>
+        {dropDownComics}
+        </select>
+        </div>
+        )
+      break;
+      default:
+      // return false
+    
+      return (
       <form >
         <input onClick={this.handleComics} type="submit" value="Comics" id="comics"/>
         <input onClick={this.handleMovies} type="submit" value="Movies" id="movies"/>
       </form>
-    )
+      )
+    }
   }
 }
 
