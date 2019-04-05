@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Banner from './components/Banner';
+import Banner from './components/banner/Banner';
 import Header from './layout/Header';
-import CardContainer from './card components/CardContainer';
+import CardContainer from './components/card components/cardContainer/CardContainer'
 
 class App extends Component {
   constructor(){

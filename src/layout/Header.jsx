@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Search from '../components/Search';
-import Filter from '../components/Filter'
+import Search from '../components/search/Search';
+import Filter from '../components/filter/Filter'
 
 export default class Header extends Component {
   constructor(props) {
