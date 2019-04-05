@@ -33,7 +33,9 @@ export class Search extends Component {
       ? this.state.value.toUpperCase().split(' ').map(word => this.rmSpecChars(word))
       : [this.rmSpecChars(this.state.value.toUpperCase())]
     let result = this.finder(userInput);
+
     this.props.storeRendered(result)
+
   }
 
   render() {
