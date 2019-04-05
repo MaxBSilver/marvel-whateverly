@@ -15,7 +15,7 @@ export class Filter extends Component {
       ? this.setState({comics: !this.state.comics})
       : this.setState({movies: false})
     if (this.state.movies) this.setState({movies: false});
-    this.props.rendered.push(...[this.props.comics])
+    this.props.storeRendered(...[Object.values(this.props.comics)])
   }
 
   handleMovies = e => {
@@ -24,7 +24,7 @@ export class Filter extends Component {
       ? this.setState({movies: !this.state.movies})
       : this.setState({comics: false})
     if (this.state.comics) this.setState({comics: false});
-    this.props.rendered.push(...[this.props.movies])
+    this.props.storeRendered(...[Object.values(this.props.movies)])
   }
 
   // object.values over current movies/comics, index 0

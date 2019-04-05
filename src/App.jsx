@@ -10,7 +10,7 @@ class App extends Component {
       movies: [],
       comics: [],
       combined: [],
-      rendered: [],
+      rendered: []
     };
   }
   
@@ -32,18 +32,17 @@ class App extends Component {
   combineData = () => {
     this.setState({ combined: Object.values(this.state.movies).concat(Object.values(this.state.comics)) })
   }
+
   storeRendered = (media) => {
     this.setState({rendered : media})
   }
+
   render() {
-    console.log(this.state.rendered)
-    if (!this.state.movies || !this.state.comics){
-      return <div/>
-    }
     return (
       <div className="App">
         <Banner />
         <Header {...this.state} storeRendered={this.storeRendered}/>
+        < CardContainer rendered={ this.state.rendered } />
         {/* <Banner movies={this.state.movies} comics={this.state.comics}/> */}
         {/* <Banner {...this.state}/> */}
         {/* <CardContainer rendered={this.state.rendered}/> */}
