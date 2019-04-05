@@ -27,37 +27,15 @@ export class Filter extends Component {
     this.props.rendered.push(...[this.props.movies])
   }
 
-  // object.values over current movies/comics, index 0
-  // object.keys over that and map into a dropdown
-
-  // filterData = () => {
-  //   let val = Object.values(this.props.movies)
-  //   val[0].map(v => {
-  //     return <option>{v}</option>
-  //   })
-  // }
-
-  // switch(true) {
-  //   case this.state.movies:
-  //   Object.values(this.props.movies)
-  //     val[0].map(v => {
-  //       return <option>{v}</option>
-  //     })
-  //     break;
-  //   case this.state.comics:
-  //     break;
-  //   default:
-  // }
-
   
   render() {
 
-    let val = Object.values(this.props.movies)
-    let dropDownMovies = Object.keys(val).map(v => {
-    return (<option value={v}>{v}</option>)})
-    let com = Object.values(this.props.comics)
-    let dropDownComics = Object.keys(com).map(v => {
-    return (<option value={v}>{v}</option>)})
+    let val = this.props.movies['deadpool']
+    // let dropDownMovies = Object.keys(val).map(v => (<option value={v}>{v}</option>))
+    let com = this.props.comics['civilWar']
+    // let comKeys = Object.keys(com[0])
+    // let dropDownComics = comKeys.map(v => {
+    // return (<option value={v}>{v}</option>)})
               
     switch(true) {
       case this.state.movies:
@@ -65,7 +43,7 @@ export class Filter extends Component {
             <div>
             <select>
               <option value="" selected="selected">--Filter by--</option>
-            {dropDownMovies}
+            {Object.keys(val).map(v => (<option value={v}>{v.split(' ')}</option>))}
             </select>
             </div>
             )
@@ -75,7 +53,7 @@ export class Filter extends Component {
         <div>
         <select>
           <option value="" selected="selected">--Filter by--</option>
-        {dropDownComics}
+        {Object.keys(com).map(v => (<option value={v}>{v.split(' ')}</option>))}
         </select>
         </div>
         )
