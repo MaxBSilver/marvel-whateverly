@@ -51,13 +51,13 @@ export class Filter extends Component {
 
   
   render() {
-
-    let val = Object.values(this.props.movies)
-    let dropDownMovies = Object.keys(val).map(v => {
-    return (<option value={v}>{v}</option>)})
-    let com = Object.values(this.props.comics)
-    let dropDownComics = Object.keys(com).map(v => {
-    return (<option value={v}>{v}</option>)})
+    let mov = this.props.movies['deadpool']
+    // let val = Object.values(this.props.movies)
+    // let dropDownMovies = Object.keys(val).map(v => {
+    // return (<option value={v}>{v}</option>)})
+    let com = this.props.comics['civilWar']
+    // let dropDownComics = Object.keys(com).map(v => {
+    // return (<option value={v}>{v}</option>)})
               
     switch(true) {
       case this.state.movies:
@@ -65,21 +65,19 @@ export class Filter extends Component {
             <div>
             <select>
               <option value="" selected="selected">--Filter by--</option>
-            {dropDownMovies}
+            {Object.keys(mov).map(m => (<option value={m}>{m}</option>))}
             </select>
             </div>
             )
-      break;
       case this.state.comics:
       return (
         <div>
         <select>
           <option value="" selected="selected">--Filter by--</option>
-        {dropDownComics}
+          {Object.keys(com).map(c => (<option value={c}>{c}</option>))}
         </select>
         </div>
         )
-      break;
       default:
       // return false
     
