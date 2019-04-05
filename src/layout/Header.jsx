@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import Search from '../components/Search';
 import Filter from '../components/Filter'
 import CardContainer from '../card components/CardContainer';
+=======
+import Search from '../components/search/Search';
+import Filter from '../components/filter/Filter'
+>>>>>>> 0661283de15041b4ceb7203ce991ba97e22ec9b7
 
 export default class Header extends Component {
   constructor(props) {
