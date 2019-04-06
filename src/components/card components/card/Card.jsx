@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-export class ShowMoreCard extends Component {
+export class Card extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,16 +14,16 @@ export class ShowMoreCard extends Component {
 
   render() {
     return (
-      (<article>
-        <h3>{this.props.card.title}</h3>
+      (<article className='card'>
         <img src={this.props.card.img} 
           alt={`${this.props.card.title}`} 
           width="200px"
           onClick={this.showCardInfo}/>
-        { this.state.toggleInfo && <div>{this.props.card.link}</div> }
+        { this.state.toggleInfo && <div><a target="blank" href={this.props.card.link} >{this.props.card.link}</a></div> }
+          <h3>{this.props.card.title}</h3>
       </article>)
     )
   }
 }
 
-export default ShowMoreCard
+export default Card

@@ -27,37 +27,10 @@ export class Filter extends Component {
     this.props.storeRendered(...[Object.values(this.props.movies)])
   }
 
-  // object.values over current movies/comics, index 0
-  // object.keys over that and map into a dropdown
-
-  // filterData = () => {
-  //   let val = Object.values(this.props.movies)
-  //   val[0].map(v => {
-  //     return <option>{v}</option>
-  //   })
-  // }
-
-  // switch(true) {
-  //   case this.state.movies:
-  //   Object.values(this.props.movies)
-  //     val[0].map(v => {
-  //       return <option>{v}</option>
-  //     })
-  //     break;
-  //   case this.state.comics:
-  //     break;
-  //   default:
-  // }
-
   
   render() {
     let mov = this.props.movies['deadpool']
-    // let val = Object.values(this.props.movies)
-    // let dropDownMovies = Object.keys(val).map(v => {
-    // return (<option value={v}>{v}</option>)})
     let com = this.props.comics['civilWar']
-    // let dropDownComics = Object.keys(com).map(v => {
-    // return (<option value={v}>{v}</option>)})
               
     switch(true) {
       case this.state.movies:

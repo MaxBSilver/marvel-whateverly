@@ -301,7 +301,7 @@ const marvelComics = {
     "adapted": true,
     "summary": "The Hulk lands on an alien planet known as Sakaar and winds up a gladiator alongside other creatures, such as Miek and Korg, fighting under the Red King.",
     "link": "https://marvel.fandom.com/wiki/Planet_Hulk",
-    "img": "https://vignette.wikia.nocookie.net/marveldatabase/images/c/c9/Incredible_Hulk_Vol_2_92_Textless.jpg/revision/latest/scale-to-width-down/200?cb=20090803143444",
+    "img": "https://vignette.wikia.nocookie.net/marveldatabase/images/f/f3/Incredible_Hulk_Vol_2_92.jpg/revision/latest?cb=20090803141013",
     "id": 20,
     "favorite": false
   },

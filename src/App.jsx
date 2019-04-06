@@ -15,6 +15,7 @@ class App extends Component {
   }
   
   componentDidMount = () => {
+    window.addEventListener("scroll", this.resizeHeaderOnScroll);
     fetch('https://fe-apps.herokuapp.com/api/v1/whateverly/1901/raechelo/marvelMovies')
       .then(res => res.json())
       .then(movies => this.setState({ movies: movies.marvelMovies }))
@@ -29,6 +30,20 @@ class App extends Component {
       .catch(err => { throw new Error(err) })
   }
 
+  resizeHeaderOnScroll() {
+    // const distanceY = window.pageYOffset || document.documentElement.scrollTop,
+    //   shrinkOn = 200,
+    //   headerEl = document.getElementById("banner");
+
+    // if (distanceY > shrinkOn) {
+    //   console.log('should be small')
+    //   // headerEl.classList.add("smaller");
+    // } else {
+    //   // headerEl.classList.remove("smaller");
+    //   console.log('should be normal')
+    // }
+  }
+
   combineData = () => {
     this.setState({ combined: Object.values(this.state.movies).concat(Object.values(this.state.comics)) })
   }
@@ -40,7 +55,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Banner />
+        <Banner id="banner" />
         <Header {...this.state} storeRendered={this.storeRendered}/>
         < CardContainer rendered={ this.state.rendered } />
         {/* <Banner movies={this.state.movies} comics={this.state.comics}/> */}

@@ -10,6 +10,10 @@ exports[`App should match the snapshot with all the data passed in 1`] = `
     comics={Array []}
     movies={Array []}
     rendered={Array []}
+    storeRendered={[Function]}
+  />
+  <CardContainer
+    rendered={Array []}
   />
 </div>
 `;
