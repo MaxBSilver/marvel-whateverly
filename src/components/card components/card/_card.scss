@@ -1,0 +1,18 @@
+.card {
+  border: 3px solid;
+  border-color: red blue blue red;
+  min-width: 20%;
+  max-width: 25%;
+
+  h3 {
+    font-family: $bodyfont;
+  }
+
+  &:hover {
+    filter: brightness(35%);
+    h3{
+      font-weight: bolder;
+      text-decoration: underline;
+    }
+  }
+}

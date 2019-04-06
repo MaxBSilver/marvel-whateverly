@@ -1,7 +1,5 @@
 @import 'variables';
-@import 'App';
-@import 'Banner';
-@import 'Header';
+@import '../layout/header';
 @import '../components/card components/cardContainer/card-container';
 @import '../components//filter/filter';
 @import '../components/search/search';
