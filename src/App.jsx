@@ -15,7 +15,7 @@ class App extends Component {
   }
   
   componentDidMount = () => {
-    window.addEventListener("scroll", this.resizeHeaderOnScroll);
+    // window.addEventListener("scroll", this.resizeHeaderOnScroll);
     fetch('https://fe-apps.herokuapp.com/api/v1/whateverly/1901/raechelo/marvelMovies')
       .then(res => res.json())
       .then(movies => this.setState({ movies: movies.marvelMovies }))
@@ -60,7 +60,6 @@ class App extends Component {
         < CardContainer rendered={ this.state.rendered } />
         {/* <Banner movies={this.state.movies} comics={this.state.comics}/> */}
         {/* <Banner {...this.state}/> */}
-        {/* <CardContainer rendered={this.state.rendered}/> */}
       </div>
     );
   }

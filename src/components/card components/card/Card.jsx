@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 export class Card extends Component {
   constructor(props) {
@@ -8,7 +7,7 @@ export class Card extends Component {
     }
   }
 
-  showCardInfo = event => {
+  showCardInfo = () => {
     this.setState({toggleInfo: !this.state.toggleInfo})
   }
 
