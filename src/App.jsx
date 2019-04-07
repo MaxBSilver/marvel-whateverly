@@ -4,7 +4,7 @@ import Header from './layout/Header';
 import CardContainer from './components/card components/cardContainer/CardContainer'
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
       movies: [],
@@ -26,6 +26,8 @@ class App extends Component {
       .then(comics => this.setState({ comics: comics.marvelComics }))
       .then(() => {
         this.combineData()
+        let combinedCopy = this.state.combined;
+        this.setState({rendered: combinedCopy.sort(() => .5 - Math.random()).slice(0, 10)})
       })
       .catch(err => { throw new Error(err) })
   }
