@@ -1,0 +1,28 @@
+.card {
+  border: 3px solid;
+  // border-color: red blue blue red;
+  min-height:20em;
+  display: flex;
+  justify-content:center;
+  height:100%;
+  img {
+    height: 25em;
+    width: 18em;
+  }
+  h3 {
+    display: flex;
+    justify-content: center;
+    font-family: "Open Sans", sans-serif;
+    max-width: 13.1em;
+    margin: auto;
+    font-size: 16px;
+  }
+
+  &:hover {
+    filter: brightness(35%);
+    h3{
+      font-weight: bolder;
+      text-decoration: underline;
+    }
+  }
+}

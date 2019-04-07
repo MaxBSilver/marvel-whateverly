@@ -4,11 +4,17 @@ exports[`App should match the snapshot with all the data passed in 1`] = `
 <div
   className="App"
 >
-  <Banner />
+  <Banner
+    id="banner"
+  />
   <Header
     combined={Array []}
     comics={Array []}
     movies={Array []}
+    rendered={Array []}
+    storeRendered={[Function]}
+  />
+  <CardContainer
     rendered={Array []}
   />
 </div>

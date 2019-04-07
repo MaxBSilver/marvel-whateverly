@@ -11,11 +11,12 @@ export class CardContainer extends Component {
   render() {
 
       return (
-        <section>
+        <section className='card-container'>
           { this.props.rendered.map(card => 
           <Card  
             key={card.id}
             card={card}
+            updateFavorites={this.props.updateFavorites}
           />) }
         </section>
       )

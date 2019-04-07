@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot with all the info passed in 1`] = `
+<article
+  className="card"
+>
+  <img
+    alt="Incredible Hulk Vol. 2 #92 'Exile, Part 1'"
+    onClick={[Function]}
+    src="https://vignette.wikia.nocookie.net/marveldatabase/images/f/f3/Incredible_Hulk_Vol_2_92.jpg/revision/latest?cb=20090803141013"
+    width="200px"
+  />
+  <h3>
+    Incredible Hulk Vol. 2 #92 'Exile, Part 1'
+  </h3>
+</article>
+`;

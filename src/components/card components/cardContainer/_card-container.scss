@@ -1,0 +1,8 @@
+.card-container {
+  margin-top:2.2em;
+  display: grid;
+  grid-template-columns: repeat(4, 20%);
+  grid-gap: 6.35%;
+  text-align: center;
+  align-items: center;
+}

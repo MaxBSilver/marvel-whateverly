@@ -1,4 +1,9 @@
 @import 'variables';
-@import 'App';
-@import 'Banner';
-@import 'Header';
+@import '../layout/header';
+@import '../components/card components/cardContainer/card-container';
+@import '../components//filter/filter';
+@import '../components/search/search';
+@import '../components/favorites/favorites';
+@import '../components/banner/banner';
+@import '../components/card components/showMore/show-more-card';
+@import '../components/card components/card/card';

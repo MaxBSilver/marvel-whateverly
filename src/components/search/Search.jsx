@@ -17,9 +17,24 @@ export class Search extends Component {
     }).join('')
   }
 
-  finder(words) {
-    return this.props.data.filter((item) => { 
-      let reduced = item.title.toUpperCase().split(' ').reduce((acc, word) => {
+  searchData() {
+    let data;
+    switch (true) {
+    case this.props.searchThisDataset === 'movies':
+      data = Object.values(this.props.movies)
+      break;
+    case this.props.searchThisDataset === 'comics':
+      data = Object.values(this.props.comics)
+      break;
+    default:
+      data = this.props.data
+    }
+    return data;
+  }
+
+  finder(words, criteria) {
+    return this.searchData().filter((item) => { 
+      let reduced = item[criteria].toUpperCase().split(' ').reduce((acc, word) => {
           acc.push(this.rmSpecChars(word))
         return acc;
       }, [])
@@ -32,10 +47,8 @@ export class Search extends Component {
     let userInput = this.state.value.split(' ').length > 1 
       ? this.state.value.toUpperCase().split(' ').map(word => this.rmSpecChars(word))
       : [this.rmSpecChars(this.state.value.toUpperCase())]
-    let result = this.finder(userInput);
-
+    let result = this.finder(userInput, this.props.searchCriteria);
     this.props.storeRendered(result)
-
   }
 
   render() {
@@ -45,11 +58,11 @@ export class Search extends Component {
           type='text'
           value={this.state.value}
           onChange={this.handleChange}
-          placeholder='Search'
+          placeholder={`Search ${this.props.searchThisDataset}`}
         />
         <input
           type='submit'
-          value='Submit'
+          value='Search'
         />
       </form>
     )
