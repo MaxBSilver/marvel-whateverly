@@ -1,11 +1,21 @@
 .card {
   border: 3px solid;
-  border-color: red blue blue red;
-  min-width: 20%;
-  max-width: 25%;
-
+  // border-color: red blue blue red;
+  min-height:20em;
+  display: flex;
+  justify-content:center;
+  height:100%;
+  img {
+    height: 25em;
+    width: 18em;
+  }
   h3 {
-    font-family: $bodyfont;
+    display: flex;
+    justify-content: center;
+    font-family: "Open Sans", sans-serif;
+    max-width: 13.1em;
+    margin: auto;
+    font-size: 16px;
   }
 
   &:hover {
