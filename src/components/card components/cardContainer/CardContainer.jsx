@@ -16,6 +16,7 @@ export class CardContainer extends Component {
           <Card  
             key={card.id}
             card={card}
+            updateFavorites={this.props.updateFavorites}
           />) }
         </section>
       )
