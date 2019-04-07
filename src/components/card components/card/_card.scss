@@ -6,7 +6,7 @@
   justify-content:center;
   height:100%;
   img {
-    height: 25em;
+    height: 100%;
     width: 18em;
   }
   h3 {
@@ -16,6 +16,20 @@
     max-width: 13.1em;
     margin: auto;
     font-size: 16px;
+  }
+  .image-container{
+    height: 80%;
+  }
+  .info-container {
+    height: 20%;
+    display:flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .button-container {
+    margin-bottom: 10px;
+    display:flex;
+    justify-content: space-around;
   }
 
   &:hover {
