@@ -10,6 +10,17 @@
   &:hover {
     box-shadow: $btnShadow-hover;
     cursor: pointer;
+    text-decoration: underline;
   }
 }
 
+.filter-dropdown {
+  border: $basicBorder;
+  font-family: $fancyfont;
+  font-size: 1.5rem;
+  transform: $btnSkew;
+}
+
+.filter-form {
+  text-align: center;
+}

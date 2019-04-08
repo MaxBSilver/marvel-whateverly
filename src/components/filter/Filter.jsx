@@ -42,12 +42,12 @@ export class Filter extends Component {
     switch(true) {
       case this.state.movies:
       return (
-        <div>
-          <button onClick={this.resetSearch} type="button">
+        <div className="filter-form">
+          <button className="filter-btn" onClick={this.resetSearch} type="button">
             Show All
           </button>
-          <input onClick={this.handleComics} type="submit" value="Show Comics" id="comics"/>
-          <select>
+          <input className="filter-btn" onClick={this.handleComics} type="submit" value="Show Comics" id="comics"/>
+          <select className="filter-dropdown">
             <option value="" selected="selected">--Filter by--</option>
           {Object.keys(mov).map(m => (<option value={m}>{m}</option>))}
           </select>
@@ -55,12 +55,12 @@ export class Filter extends Component {
       )
       case this.state.comics:
       return (
-        <div>
-          <button onClick={this.resetSearch} type="button">
+        <div className="filter-form">
+          <button className="filter-btn" onClick={this.resetSearch} type="button">
               Show All
           </button>
-          <input onClick={this.handleMovies} type="submit" value="Show Movies" id="movies"/>
-          <select>
+          <input className="filter-btn" onClick={this.handleMovies} type="submit" value="Show Movies" id="movies"/>
+          <select className="filter-dropdown">
             <option value="" selected="selected">--Filter by--</option>
             {Object.keys(com).map(c => (<option value={c}>{c}</option>))}
           </select>
