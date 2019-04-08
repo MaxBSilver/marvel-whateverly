@@ -28,7 +28,7 @@ export class Card extends Component {
     return (
 
       (
-      <article className='card' onClick={this.showCardInfo}>
+      <article className='card'>
         <div className ='card-positioning'>
           <div className="image-container">
            <img src={this.props.card.img} 
@@ -42,7 +42,7 @@ export class Card extends Component {
                <h3>{this.props.card.title}</h3>
               <div className="button-container">
                 <button type='button' onClick={this.toggleFavorite}>FAVORITE</button>
-                <button type='button'>Show More</button>
+                <button type='button' onClick={this.showCardInfo}>Show More</button>
               </div>
             </div>
         </div>

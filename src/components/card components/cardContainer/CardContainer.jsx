@@ -9,7 +9,6 @@ export class CardContainer extends Component {
   }
 
   render() {
-
       return (
         <section className='card-container'>
           { this.props.rendered.map(card => 
