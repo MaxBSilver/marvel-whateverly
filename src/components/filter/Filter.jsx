@@ -69,8 +69,8 @@ export class Filter extends Component {
       default:
       return (
       <form >
-        <input onClick={this.handleComics} type="submit" value="Comics" id="comics"/>
-        <input onClick={this.handleMovies} type="submit" value="Movies" id="movies"/>
+        <input className="filter-btn" onClick={this.handleComics} type="submit" value="Comics" id="comics"/>
+        <input className="filter-btn" onClick={this.handleMovies} type="submit" value="Movies" id="movies"/>
       </form>
       )
     }

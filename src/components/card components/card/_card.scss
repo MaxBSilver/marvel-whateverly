@@ -33,10 +33,18 @@
   }
 
   &:hover {
-    filter: brightness(35%);
     h3{
       font-weight: bolder;
       text-decoration: underline;
+    }
+  }
+  button {
+    transform: $btnSkew;
+    height: 1.7rem;
+    border: 2px solid hsl(0, 100%, 38%);
+    box-shadow: 2px 2px 2px black;
+    &:hover {
+      box-shadow: 3px 3px 3px black;
     }
   }
 }
