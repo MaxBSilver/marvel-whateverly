@@ -1,4 +1,5 @@
 .card {
+  background-color: white;
   border: 3px solid;
   min-height: 25em;
   display: flex;
@@ -45,7 +46,7 @@
     }
   }
   button {
-    border: 2px solid hsl(0, 100%, 38%);
+    border: 2px solid $red;
     box-shadow: $btnShadow;
     font-family: $fancyfont;
     font-size: 1rem;
@@ -53,6 +54,8 @@
     transform: $btnSkew;
     &:hover {
       box-shadow: $btnShadow-hover;
+      cursor: pointer;
+
     }
   }
 }
