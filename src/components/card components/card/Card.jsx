@@ -25,6 +25,30 @@ export class Card extends Component {
   }
 
   render() {
+    let comicCard =
+        <article>
+          <p>{this.props.card.publishDate}</p>
+          <p>{this.props.card.characters}</p>
+          <p>{this.props.card.writer}</p>
+          <p>Letterers: {this.props.card.letterers}</p>
+          <p>Inkers: {this.props.card.inkers}</p>
+          <p>Colorists: {this.props.card.colorists}</p>
+          <p>Editors: {this.props.card.editors}</p>
+          <p>Adapted: {this.props.card.adapted}</p>
+          <p>About: {this.props.card.summary}</p>
+          <a target="blank" href={this.props.card.link} >read the wiki</a>
+        </article>;
+
+    let movieCard = 
+        <article>
+          <p>{this.props.card.releaseYear}</p>
+          <p>{this.props.card.characters}</p>
+          <p>{this.props.card.writer}</p>
+          <p>Director(s): {this.props.card.director}</p>
+          <p>Based On: {this.props.card.basedOn}</p>
+          <p>About: {this.props.card.summary}</p>
+          <a target="blank" href={this.props.card.link} >read the wiki</a>
+        </article>
     return (
 
       (
@@ -34,9 +58,8 @@ export class Card extends Component {
            <img src={this.props.card.img} 
             alt={`${this.props.card.title}`} />
            { this.state.toggleInfo && 
-            <div>
-              <a target="blank" href={this.props.card.link} >wiki link</a>
-            </div> }
+            this.props.card.director ? movieCard : comicCard
+           }
             </div>
             <div className="info-container">
                <h3>{this.props.card.title}</h3>
