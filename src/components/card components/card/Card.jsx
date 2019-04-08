@@ -49,17 +49,16 @@ export class Card extends Component {
           <p>About: {this.props.card.summary}</p>
           <a target="blank" href={this.props.card.link} >read the wiki</a>
         </article>
-    return (
 
-      (
+    if (this.state.toggleInfo) {
+      return this.props.card.director ? movieCard : comicCard
+    } else {
+    return (
       <article className='card'>
         <div className ='card-positioning'>
           <div className="image-container">
            <img src={this.props.card.img} 
             alt={`${this.props.card.title}`} />
-           { this.state.toggleInfo && 
-            this.props.card.director ? movieCard : comicCard
-           }
             </div>
             <div className="info-container">
                <h3>{this.props.card.title}</h3>
@@ -70,7 +69,7 @@ export class Card extends Component {
             </div>
         </div>
       </article>)
-    )
+    }
   }
 }
 
