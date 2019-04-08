@@ -23,7 +23,17 @@
 
   .image-container{
     height: 80%;
-    min-width: 100%
+    min-width: 100%;
+    position: relative;
+  }
+
+  .popup-container {
+    position: absolute;
+    color: white;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    // word-break: break-all;
+    width: 100%;
   }
 
   .info-container {

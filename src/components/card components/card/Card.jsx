@@ -25,51 +25,47 @@ export class Card extends Component {
   }
 
   render() {
-    let comicCard =
-        <article>
-          <p>{this.props.card.publishDate}</p>
-          <p>{this.props.card.characters}</p>
+    const cardInfo = 
+    this.props.card.imdbRating
+      ? <article className='popup-container'>
+          <p>Released: {this.props.card.releaseYear}</p>
+          <p>Characters: {this.props.card.characters.join(' - ')}</p>
+          <p>{this.props.card.writer}</p>
+          <p>Director(s): {this.props.card.directors}</p>
+          <p>Based On: {this.props.card.basedOn}</p>
+          <p>About: {this.props.card.summary}</p>
+          <a target="blank" href={this.props.card.link} >read the wiki</a>
+        </article>
+      : <article className='popup-container'>
+          <p>Released: {this.props.card.publishDate}</p>
+          <p>Characters: {this.props.card.characters.join(' - ')}</p>
           <p>{this.props.card.writer}</p>
           <p>Letterers: {this.props.card.letterers}</p>
           <p>Inkers: {this.props.card.inkers}</p>
           <p>Colorists: {this.props.card.colorists}</p>
           <p>Editors: {this.props.card.editors}</p>
-          <p>Adapted: {this.props.card.adapted}</p>
-          <p>About: {this.props.card.summary}</p>
-          <a target="blank" href={this.props.card.link} >read the wiki</a>
-        </article>;
-
-    let movieCard = 
-        <article>
-          <p>{this.props.card.releaseYear}</p>
-          <p>{this.props.card.characters}</p>
-          <p>{this.props.card.writer}</p>
-          <p>Director(s): {this.props.card.director}</p>
-          <p>Based On: {this.props.card.basedOn}</p>
+          <p>Adapted: {this.props.card.adapted ? 'Yes' : 'No'}</p>
           <p>About: {this.props.card.summary}</p>
           <a target="blank" href={this.props.card.link} >read the wiki</a>
         </article>
 
-    if (this.state.toggleInfo) {
-      return this.props.card.director ? movieCard : comicCard
-    } else {
     return (
       <article className='card'>
         <div className ='card-positioning'>
           <div className="image-container">
            <img src={this.props.card.img} 
             alt={`${this.props.card.title}`} />
+            {this.state.toggleInfo && cardInfo}
+          </div>
+          <div className="info-container">
+              <h3>{this.props.card.title}</h3>
+            <div className="button-container">
+              <button type='button' onClick={this.toggleFavorite}>FAVORITE</button>
+              <button type='button' onClick={this.showCardInfo}>Show More</button>
             </div>
-            <div className="info-container">
-               <h3>{this.props.card.title}</h3>
-              <div className="button-container">
-                <button type='button' onClick={this.toggleFavorite}>FAVORITE</button>
-                <button type='button' onClick={this.showCardInfo}>Show More</button>
-              </div>
-            </div>
+          </div>
         </div>
       </article>)
-    }
   }
 }
 
