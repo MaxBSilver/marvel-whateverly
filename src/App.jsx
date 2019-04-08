@@ -64,11 +64,11 @@ class App extends Component {
       <div className="App">
         <Banner id="banner" />
         <Header {...this.state} storeRendered={this.storeRendered}/>
-        <h2>Comics & Movies</h2>
+        <h2 className="heading">Comics & Movies</h2>
         < CardContainer 
           updateFavorites={ this.updateFavorites } 
           rendered={ this.state.rendered } />
-        <h2>Your Favorites</h2>
+        <h2 className="heading">Your Favorites</h2>
         < CardContainer 
           rendered={ this.state.favorites }
           updateFavorites={ this.updateFavorites }

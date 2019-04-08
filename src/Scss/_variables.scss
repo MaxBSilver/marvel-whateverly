@@ -1,2 +1,12 @@
 $fancyfont: 'Permanent Marker', cursive;
 $bodyfont: 'Open Sans', sans-serif;
+$btnSkew: skewX(-15deg);
+$basicBorder: 2px solid black;
+$btnShadow: 2px 2px 2px black;
+$btnShadow-hover: 3px 4px 4px black;
+
+
+// COLOR SCHEME
+$yellow: hsla(60, 100%, 44%, 1);
+$red: hsla(0, 100%, 38%, 1);
+$blue: hsla(250, 85%, 45%, 1);

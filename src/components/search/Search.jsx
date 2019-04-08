@@ -56,12 +56,14 @@ export class Search extends Component {
       <form onSubmit={this.handleSubmit}>
         <input
           type='text'
+          className="search-input"
           value={this.state.value}
           onChange={this.handleChange}
           placeholder={`Search ${this.props.searchThisDataset}`}
         />
         <input
           type='submit'
+          className="search-btn"
           value='Search'
         />
       </form>
