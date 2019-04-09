@@ -32,7 +32,6 @@
     color: white;
     bottom: 0;
     background-color: rgba(0, 0, 0, .5);
-    // word-break: break-all;
     width: 100%;
   }
 
@@ -67,5 +66,9 @@
       cursor: pointer;
 
     }
+  }
+
+  .favorited-btn {
+    background-color: pink;
   }
 }

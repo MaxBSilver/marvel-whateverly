@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 export class Card extends Component {
   constructor(props) {
     super(props);
@@ -22,6 +23,12 @@ export class Card extends Component {
     }
     localStorage.setItem('marvelous', JSON.stringify(storedCopy));
     this.props.updateFavorites();
+  }
+
+  isFavorited = () => {
+    let storedCopy = JSON.parse(localStorage.getItem('marvelous')) || [];
+    const aFavorite = storedCopy.some(card => card.id === this.props.card.id);
+    return aFavorite;
   }
 
   render() {
@@ -60,7 +67,12 @@ export class Card extends Component {
           <div className="info-container">
               <h3>{this.props.card.title}</h3>
             <div className="button-container">
-              <button type='button' onClick={this.toggleFavorite}>FAVORITE</button>
+              <button 
+                type='button' 
+                onClick={this.toggleFavorite}
+                className={this.isFavorited() ? 'favorited-btn' : ''} >
+                FAVORITE
+              </button>
               <button type='button' onClick={this.showCardInfo}>Show More</button>
             </div>
           </div>

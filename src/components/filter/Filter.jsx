@@ -30,7 +30,7 @@ export class Filter extends Component {
   }
 
   resetSearch = () => {
-    this.props.setSearchDataset('');
+    this.props.setSearchDataset('All');
     this.props.storeRendered(this.props.data);
     this.setState({comics: false, movies: false})
   }
