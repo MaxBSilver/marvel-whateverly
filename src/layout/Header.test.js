@@ -5,6 +5,8 @@ import { shallow } from 'enzyme';
 
 describe('Header', () => {
 
+  let mockSearchDataset = jest.fn();
+
   let wrapper;
 
   beforeEach(() => {
@@ -14,7 +16,7 @@ describe('Header', () => {
   });
 
   it('should have a proper default state', () => {
-    expect(wrapper.state()).toEqual( {value: ''} )
+    expect(wrapper.state()).toEqual( {value: '', searchThisDataset: null} )
   });
 
   it('should pass the snapshot with all the data passed in', () => {

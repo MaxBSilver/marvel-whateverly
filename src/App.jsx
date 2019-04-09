@@ -15,7 +15,7 @@ class App extends Component {
   }
   
   componentDidMount = () => {
-    // window.addEventListener("scroll", this.resizeHeaderOnScroll);
+    window.addEventListener("scroll", this.resizeHeaderOnScroll);
     fetch('https://fe-apps.herokuapp.com/api/v1/whateverly/1901/raechelo/marvelMovies')
       .then(res => res.json())
       .then(movies => this.setState({ movies: movies.marvelMovies }))
@@ -33,17 +33,17 @@ class App extends Component {
   }
 
   resizeHeaderOnScroll() {
-    // const distanceY = window.pageYOffset || document.documentElement.scrollTop,
-    //   shrinkOn = 200,
-    //   headerEl = document.getElementById("banner");
+    const distanceY = window.pageYOffset || document.documentElement.scrollTop,
+      shrinkOn = 200,
+      headerEl = document.getElementById("banner");
 
-    // if (distanceY > shrinkOn) {
-    //   console.log('should be small')
-    //   // headerEl.classList.add("smaller");
-    // } else {
-    //   // headerEl.classList.remove("smaller");
-    //   console.log('should be normal')
-    // }
+    if (distanceY > shrinkOn) {
+      console.log('should be small')
+      // headerEl.classList.add("smaller");
+    } else {
+      // headerEl.classList.remove("smaller");
+      console.log('should be normal')
+    }
   }
 
   combineData = () => {

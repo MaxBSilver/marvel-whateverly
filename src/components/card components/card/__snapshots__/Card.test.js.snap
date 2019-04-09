@@ -4,14 +4,41 @@ exports[`Card should match the snapshot with all the info passed in 1`] = `
 <article
   className="card"
 >
-  <img
-    alt="Incredible Hulk Vol. 2 #92 'Exile, Part 1'"
-    onClick={[Function]}
-    src="https://vignette.wikia.nocookie.net/marveldatabase/images/f/f3/Incredible_Hulk_Vol_2_92.jpg/revision/latest?cb=20090803141013"
-    width="200px"
-  />
-  <h3>
-    Incredible Hulk Vol. 2 #92 'Exile, Part 1'
-  </h3>
+  <div
+    className="card-positioning"
+  >
+    <div
+      className="image-container"
+    >
+      <img
+        alt="Incredible Hulk Vol. 2 #92 'Exile, Part 1'"
+        src="https://vignette.wikia.nocookie.net/marveldatabase/images/f/f3/Incredible_Hulk_Vol_2_92.jpg/revision/latest?cb=20090803141013"
+      />
+    </div>
+    <div
+      className="info-container"
+    >
+      <h3>
+        Incredible Hulk Vol. 2 #92 'Exile, Part 1'
+      </h3>
+      <div
+        className="button-container"
+      >
+        <button
+          className=""
+          onClick={[Function]}
+          type="button"
+        >
+          Favorite
+        </button>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          Show More
+        </button>
+      </div>
+    </div>
+  </div>
 </article>
 `;

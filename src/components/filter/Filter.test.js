@@ -46,7 +46,7 @@ describe('Filter', () => {
   });
 
   it('should have a proper default state', () => {
-    expect(wrapper.state()).toEqual( {movies: false, comics: false} );
+    expect(wrapper.state()).toEqual( {movies: false, comics: false, favorites: false} );
   });
 
   it('should match the snapshot with all the data passed in', () => {
