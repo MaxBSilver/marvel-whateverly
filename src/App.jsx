@@ -11,7 +11,6 @@ class App extends Component {
       comics: [],
       combined: [],
       rendered: [],
-      favorites: JSON.parse(localStorage.getItem('marvelous')) || []
     };
   }
   
@@ -31,10 +30,6 @@ class App extends Component {
         this.setState({rendered: combinedCopy.sort(() => .5 - Math.random()).slice(0, 10)})
       })
       .catch(err => { throw new Error(err) })
-  }
-
-  updateFavorites = () => {
-    this.setState( {favorites: JSON.parse(localStorage.getItem('marvelous')) })
   }
 
   resizeHeaderOnScroll() {
@@ -65,13 +60,7 @@ class App extends Component {
         <Banner id="banner" />
         <Header {...this.state} storeRendered={this.storeRendered}/>
         < CardContainer 
-          updateFavorites={ this.updateFavorites } 
           rendered={ this.state.rendered } />
-        <h2 className="heading">Your Favorites</h2>
-        < CardContainer 
-          rendered={ this.state.favorites }
-          updateFavorites={ this.updateFavorites }
-        />
         {/* <Banner movies={this.state.movies} comics={this.state.comics}/> */}
         {/* <Banner {...this.state}/> */}
       </div>
