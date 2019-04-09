@@ -5,7 +5,8 @@ export class Filter extends Component {
     super();
     this.state = {
       movies: false,
-      comics: false
+      comics: false,
+      favorites: false
     }
   }
 
@@ -27,6 +28,14 @@ export class Filter extends Component {
     if (this.state.comics) this.setState({comics: false});
     this.props.storeRendered(...[Object.values(this.props.movies)])
     this.props.setSearchDataset('movies')
+  }
+
+  handleFavorites = e => {
+    e.preventDefault();
+    this.setState({favorites: !this.state.favorites});
+    this.state.favorites 
+      ? this.props.storeRendered(JSON.parse(localStorage.getItem('marvelous')))
+      : this.props.storeRendered(this.props.data.slice(0, 10));
   }
 
   resetSearch = () => {
@@ -69,6 +78,8 @@ export class Filter extends Component {
       default:
       return (
       <form >
+        <input className="filter-btn" onClick={this.handleFavorites} type="submit" 
+        value="Show Favorites" id="comics"/>
         <input className="filter-btn" onClick={this.handleComics} type="submit" value="Comics" id="comics"/>
         <input className="filter-btn" onClick={this.handleMovies} type="submit" value="Movies" id="movies"/>
       </form>

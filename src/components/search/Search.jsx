@@ -9,6 +9,9 @@ export class Search extends Component {
 
   handleChange = e => {
     this.setState({ value: e.target.value })
+    if (e.target.value === '') {
+      this.props.storeRendered(this.props.data.slice(0, 10));
+    }
   }
 
   rmSpecChars(word) {

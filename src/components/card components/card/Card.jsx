@@ -12,7 +12,6 @@ export class Card extends Component {
     this.setState({toggleInfo: !this.state.toggleInfo})
   }
 
-  //INVOKE THIS WHEN THEY FAVORITE THIS PHOTO
   toggleFavorite = () => {
     let storedCopy = JSON.parse(localStorage.getItem('marvelous')) || [];
     this.props.card.favorite = !this.props.card.favorite;

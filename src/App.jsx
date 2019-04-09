@@ -67,11 +67,6 @@ class App extends Component {
         < CardContainer 
           updateFavorites={ this.updateFavorites } 
           rendered={ this.state.rendered } />
-        <h2 className="heading">Your Favorites</h2>
-        < CardContainer 
-          rendered={ this.state.favorites }
-          updateFavorites={ this.updateFavorites }
-        />
         {/* <Banner movies={this.state.movies} comics={this.state.comics}/> */}
         {/* <Banner {...this.state}/> */}
       </div>
