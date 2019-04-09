@@ -8,7 +8,6 @@ export default class Header extends Component {
     this.state = {
       value: '',
       searchThisDataset: null,
-      setSearchDataset: this.setSearchDataset
     }
   }
 
@@ -30,6 +29,7 @@ export default class Header extends Component {
           storeRendered={this.props.storeRendered} 
           comics={this.props.comics} 
           movies={this.props.movies}
+          setSearchDataset={this.setSearchDataset}
           {...this.state}
         />
       </header>
