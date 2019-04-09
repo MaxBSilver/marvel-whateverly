@@ -7,16 +7,9 @@ export default class Header extends Component {
     super(props)
     this.state = {
       value: '',
-      searchCriteria: 'title',
-      searchThisDataset: '',
-      setSearchCriteria: this.setSearchCriteria,
+      searchThisDataset: null,
       setSearchDataset: this.setSearchDataset
     }
-  }
-
-  // future use to set search criteria
-  setSearchCriteria = criteria => {
-    this.setState({searchCriteria: criteria})
   }
 
   setSearchDataset = (dataset) => {
@@ -31,7 +24,6 @@ export default class Header extends Component {
           movies={this.props.movies}
           comics={this.props.comics}
           storeRendered={this.props.storeRendered}
-          {...this.state}
         />
         <Filter 
           data={this.props.combined}

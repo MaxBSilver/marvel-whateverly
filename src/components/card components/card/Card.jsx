@@ -21,7 +21,6 @@ export class Card extends Component {
       storedCopy.splice(storedCopy.indexOf(el => el.id === this.props.card.id), 1);
     }
     localStorage.setItem('marvelous', JSON.stringify(storedCopy));
-    this.props.updateFavorites();
   }
 
   isFavorited = () => {
