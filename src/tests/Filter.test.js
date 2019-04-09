@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Filter from './Filter';
+import Filter from '../components/filter/Filter';
 import { shallow } from 'enzyme';
 
 describe('Filter', () => {

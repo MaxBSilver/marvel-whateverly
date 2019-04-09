@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Card from './Card';
+import Card from '../components/card components/card/Card';
 import { shallow } from 'enzyme';
 
 describe('Card', () => {
@@ -31,7 +31,7 @@ describe('Card', () => {
     )
   });
 
-  it('shoud have a proper default state', () => {
+  it('should have a proper default state', () => {
     expect(wrapper.state()).toEqual( {toggleInfo: false} );
   });
 

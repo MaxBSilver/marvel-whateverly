@@ -32,7 +32,7 @@ export class Filter extends Component {
 
   handleFavorites = e => {
     e.preventDefault();
-    this.state.favorites 
+    this.state.favorites
     ? this.props.storeRendered(this.props.data.slice(0, 10))
     : this.props.storeRendered(JSON.parse(localStorage.getItem('marvelous')));
     this.setState({favorites: !this.state.favorites});
