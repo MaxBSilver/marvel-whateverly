@@ -15,7 +15,7 @@
   h3 {
     display: flex;
     justify-content: center;
-    font-family: "Open Sans", sans-serif;
+    font-family: $bodyfont;
     max-width: 13.1em;
     margin: auto;
     font-size: 16px;
@@ -31,8 +31,26 @@
     position: absolute;
     color: white;
     bottom: 0;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .7);
     width: 100%;
+
+    p {
+      font-family: $bodyfont;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    a {
+      color: white;
+      font-family: $bodyfont;
+      font-size: 1rem;
+      &:visited {
+        color: $yellow;
+      }
+      &:hover {
+        color: $red;
+      }
+    }
   }
 
   .info-container {
@@ -50,7 +68,7 @@
 
   &:hover {
     h3{
-      font-weight: bolder;
+      font-weight: 800;
       text-decoration: underline;
     }
   }
@@ -69,6 +87,6 @@
   }
 
   .favorited-btn {
-    background-color: pink;
+    background-color: $yellow;
   }
 }

@@ -40,7 +40,6 @@ export class Card extends Component {
           <p>{this.props.card.writer}</p>
           <p>Director(s): {this.props.card.directors}</p>
           <p>Based On: {this.props.card.basedOn}</p>
-          <p>About: {this.props.card.summary}</p>
           <a target="blank" href={this.props.card.link} >read the wiki</a>
         </article>
       : <article className='popup-container'>
