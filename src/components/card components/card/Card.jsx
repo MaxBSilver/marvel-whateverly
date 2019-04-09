@@ -38,7 +38,7 @@ export class Card extends Component {
           <p>Released: {this.props.card.releaseYear}</p>
           <p>Characters: {this.props.card.characters.join(' - ')}</p>
           <p>{this.props.card.writer}</p>
-          {/* <p>Director(s): {this.props.card.directors.join(' - ')}</p> */}
+          <p>Director(s): {this.props.card.directors ? this.props.card.directors.join(' - ') : 'N/A'}</p>
           <p>Based On: {this.props.card.basedOn}</p>
           <a target="blank" href={this.props.card.link} >read the wiki</a>
         </article>
