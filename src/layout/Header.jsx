@@ -7,7 +7,7 @@ export default class Header extends Component {
     super(props)
     this.state = {
       value: '',
-      searchThisDataset: null,
+      searchThisDataset: null
     }
   }
 
@@ -23,14 +23,16 @@ export default class Header extends Component {
           movies={this.props.movies}
           comics={this.props.comics}
           storeRendered={this.props.storeRendered}
+          searchThisDataset={this.state.searchThisDataset}
         />
         <Filter 
           data={this.props.combined}
-          storeRendered={this.props.storeRendered} 
+          storeRendered={this.props.storeRendered}
           comics={this.props.comics} 
           movies={this.props.movies}
           setSearchDataset={this.setSearchDataset}
           {...this.state}
+          setSearchDataset={this.setSearchDataset}
         />
       </header>
     )
