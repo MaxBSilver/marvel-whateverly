@@ -1,0 +1,23 @@
+.search-input {
+  border: $basicBorder;
+  box-shadow: $btnShadow;
+  font-family: $bodyfont;
+  font-size: 1rem;
+  padding-left: .5rem;
+  transform: $btnSkew;
+}
+
+.search-btn {
+  background-color: $yellow;
+  border: $basicBorder;
+  box-shadow: $btnShadow;
+  font-family: $fancyfont;
+  font-size: 1.5rem;
+  margin: 0 -.25rem;
+  transform: $btnSkew;
+  &:hover {
+    box-shadow: $btnShadow-hover;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

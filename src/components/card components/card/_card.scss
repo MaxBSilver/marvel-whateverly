@@ -1,42 +1,89 @@
 .card {
+  background-color: white;
   border: 3px solid;
-  // border-color: red blue blue red;
-  min-height:20em;
+  min-height: 25em;
   display: flex;
   justify-content:center;
-  height:100%;
+  height: 100%;
+  
   img {
     height: 100%;
-    width: 18em;
+    // width: 100%;
+    width: 290px;
   }
+
   h3 {
     display: flex;
     justify-content: center;
-    font-family: "Open Sans", sans-serif;
+    font-family: $bodyfont;
     max-width: 13.1em;
     margin: auto;
     font-size: 16px;
   }
+
   .image-container{
     height: 80%;
+    min-width: 100%;
+    position: relative;
   }
+
+  .popup-container {
+    position: absolute;
+    color: white;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+
+    p {
+      font-family: $bodyfont;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    a {
+      color: white;
+      font-family: $bodyfont;
+      font-size: 1rem;
+      &:visited {
+        color: $yellow;
+      }
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
   .info-container {
     height: 20%;
     display:flex;
     justify-content: space-around;
     flex-direction: column;
   }
+
   .button-container {
-    margin-bottom: 10px;
     display:flex;
     justify-content: space-around;
+    padding-bottom: 1rem;
   }
 
   &:hover {
-    filter: brightness(35%);
-    h3{
-      font-weight: bolder;
+    background-color: hsla(355, 5%, 75%, 1);
+  }
+  button {
+    border: 2px solid $red;
+    box-shadow: $btnShadow;
+    font-family: $fancyfont;
+    font-size: 1rem;
+    height: 1.7rem;
+    transform: $btnSkew;
+    &:hover {
+      box-shadow: $btnShadow-hover;
+      cursor: pointer;
       text-decoration: underline;
     }
+  }
+
+  .favorited-btn {
+    background-color: $yellow;
   }
 }

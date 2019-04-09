@@ -1,8 +1,9 @@
 .card-container {
-  margin-top:2.2em;
+  margin-top: 4rem;
   display: grid;
-  grid-template-columns: repeat(4, 20%);
-  grid-gap: 6.35%;
+  grid-gap: 2%;
+  padding: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  justify-items: center;
   text-align: center;
-  align-items: center;
 }

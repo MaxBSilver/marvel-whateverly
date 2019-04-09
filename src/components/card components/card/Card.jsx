@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 export class Card extends Component {
   constructor(props) {
     super(props);
@@ -24,30 +25,59 @@ export class Card extends Component {
     this.props.updateFavorites();
   }
 
-  render() {
-    return (
+  isFavorited = () => {
+    let storedCopy = JSON.parse(localStorage.getItem('marvelous')) || [];
+    const aFavorite = storedCopy.some(card => card.id === this.props.card.id);
+    return aFavorite;
+  }
 
-      (
-      <article className='card' onClick={this.showCardInfo}>
+  render() {
+    const cardInfo = 
+    this.props.card.imdbRating
+      ? <article className='popup-container'>
+          <p>Released: {this.props.card.releaseYear}</p>
+          <p>Characters: {this.props.card.characters.join(' - ')}</p>
+          <p>{this.props.card.writer}</p>
+          <p>Director(s): {this.props.card.directors ? this.props.card.directors.join(' - ') : 'N/A'}</p>
+          <p>Based On: {this.props.card.basedOn}</p>
+          <a target="blank" href={this.props.card.link} >read the wiki</a>
+        </article>
+      : <article className='popup-container'>
+          <p>Released: {this.props.card.publishDate}</p>
+          <p>Characters: {this.props.card.characters.join(' - ')}</p>
+          <p>{this.props.card.writer}</p>
+          <p>Letterers: {this.props.card.pencillers ? this.props.card.pencillers.join(' - ') : 'N/A'}</p>
+          <p>Letterers: {this.props.card.letterers ? this.props.card.letterers : 'N/A'}</p>
+          <p>Inkers: {this.props.card.inkers ? this.props.card.inkers.join(' - '): 'N/A'}</p>
+          <p>Colorists: {this.props.card.colorists ? this.props.card.colorists.join(' - '): 'N/A'}</p>
+          <p>Editors: {this.props.card.editors ? this.props.card.editors.join(' - ') : 'N/A'}</p>
+          <p>Adapted: {this.props.card.adapted ? 'Yes' : 'No'}</p>
+          <p>About: {this.props.card.summary}</p>
+          <a target="blank" href={this.props.card.link} >read the wiki</a>
+        </article>
+
+    return (
+      <article className='card'>
         <div className ='card-positioning'>
           <div className="image-container">
            <img src={this.props.card.img} 
             alt={`${this.props.card.title}`} />
-           { this.state.toggleInfo && 
-            <div>
-              <a target="blank" href={this.props.card.link} >wiki link</a>
-            </div> }
+            {this.state.toggleInfo && cardInfo}
+          </div>
+          <div className="info-container">
+              <h3>{this.props.card.title}</h3>
+            <div className="button-container">
+              <button 
+                type='button' 
+                onClick={this.toggleFavorite}
+                className={this.isFavorited() ? 'favorited-btn' : ''} >
+                Favorite
+              </button>
+              <button type='button' onClick={this.showCardInfo}>Show More</button>
             </div>
-            <div className="info-container">
-               <h3>{this.props.card.title}</h3>
-              <div className="button-container">
-                <button type='button' onClick={this.toggleFavorite}>FAVORITE</button>
-                <button type='button'>Show More</button>
-              </div>
-            </div>
+          </div>
         </div>
       </article>)
-    )
   }
 }
 
