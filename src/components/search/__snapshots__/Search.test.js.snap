@@ -5,14 +5,16 @@ exports[`Search should match the snapshot with all the data passed in 1`] = `
   onSubmit={[Function]}
 >
   <input
+    className="search-input"
     onChange={[Function]}
     placeholder="Search"
     type="text"
     value=""
   />
   <input
+    className="search-btn"
     type="submit"
-    value="Submit"
+    value="Search"
   />
 </form>
 `;
