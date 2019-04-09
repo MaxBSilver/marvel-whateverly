@@ -18,5 +18,6 @@
   &:hover {
     box-shadow: $btnShadow-hover;
     cursor: pointer;
+    text-decoration: underline;
   }
 }

@@ -38,7 +38,7 @@ export class Card extends Component {
           <p>Released: {this.props.card.releaseYear}</p>
           <p>Characters: {this.props.card.characters.join(' - ')}</p>
           <p>{this.props.card.writer}</p>
-          <p>Director(s): {this.props.card.directors}</p>
+          {/* <p>Director(s): {this.props.card.directors.join(' - ')}</p> */}
           <p>Based On: {this.props.card.basedOn}</p>
           <a target="blank" href={this.props.card.link} >read the wiki</a>
         </article>
@@ -46,10 +46,11 @@ export class Card extends Component {
           <p>Released: {this.props.card.publishDate}</p>
           <p>Characters: {this.props.card.characters.join(' - ')}</p>
           <p>{this.props.card.writer}</p>
-          <p>Letterers: {this.props.card.letterers}</p>
-          <p>Inkers: {this.props.card.inkers}</p>
-          <p>Colorists: {this.props.card.colorists}</p>
-          <p>Editors: {this.props.card.editors}</p>
+          <p>Letterers: {this.props.card.pencillers ? this.props.card.pencillers.join(' - ') : 'N/A'}</p>
+          <p>Letterers: {this.props.card.letterers ? this.props.card.letterers : 'N/A'}</p>
+          <p>Inkers: {this.props.card.inkers ? this.props.card.inkers.join(' - '): 'N/A'}</p>
+          <p>Colorists: {this.props.card.colorists ? this.props.card.colorists.join(' - '): 'N/A'}</p>
+          <p>Editors: {this.props.card.editors ? this.props.card.editors.join(' - ') : 'N/A'}</p>
           <p>Adapted: {this.props.card.adapted ? 'Yes' : 'No'}</p>
           <p>About: {this.props.card.summary}</p>
           <a target="blank" href={this.props.card.link} >read the wiki</a>
