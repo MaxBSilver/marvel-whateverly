@@ -71,7 +71,7 @@ export class Card extends Component {
                 type='button' 
                 onClick={this.toggleFavorite}
                 className={this.isFavorited() ? 'favorited-btn' : ''} >
-                FAVORITE
+                Favorite
               </button>
               <button type='button' onClick={this.showCardInfo}>Show More</button>
             </div>
