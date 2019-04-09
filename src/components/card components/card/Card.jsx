@@ -4,7 +4,8 @@ export class Card extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      toggleInfo: false
+      toggleInfo: false,
+      favorited: false
     }
   }
 
@@ -21,6 +22,7 @@ export class Card extends Component {
       storedCopy.splice(storedCopy.indexOf(el => el.id === this.props.card.id), 1);
     }
     localStorage.setItem('marvelous', JSON.stringify(storedCopy));
+    this.setState({favorited : !this.state.favorited})
   }
 
   isFavorited = () => {
