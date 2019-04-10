@@ -50,7 +50,6 @@ export class Filter extends Component {
       : Object.values(this.props.comics)
     this.props.storeRendered(sortThis
       .sort((el1, el2) => {
-        // console.log(el1[e.target.value] !== null)
         if (el1[e.target.value] !== null && el2[e.target.value] !== null && typeof el1[e.target.value] === 'object') {
           return el2[e.target.value][0].localeCompare(el1[e.target.value][0])
         } else return el2[e.target.value] - el1[e.target.value] 

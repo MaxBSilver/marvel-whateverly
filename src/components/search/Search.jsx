@@ -45,7 +45,6 @@ export class Search extends Component {
         return acc;
       }, [])
       let additionalSearch = this.increaseSearchCapability(item)
-      console.log(reduced.concat(additionalSearch))
       return reduced.concat(additionalSearch).some(keyWord => words.includes(keyWord));
    })
   }
