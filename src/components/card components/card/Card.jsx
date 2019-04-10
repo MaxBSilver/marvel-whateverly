@@ -31,6 +31,17 @@ export class Card extends Component {
     return aFavorite;
   }
 
+  stanLeeApproved = () => {
+    let approved;
+    if(this.props.card.writers && this.props.card.editors) {
+      approved = this.props.card.writers.concat(this.props.card.editors)
+        .includes('Stan Lee')
+          ? true
+          : false;
+    }
+    return approved;
+  }
+
   render() {
     const cardInfo = 
     this.props.card.imdbRating
@@ -40,12 +51,14 @@ export class Card extends Component {
           <p>{this.props.card.writer}</p>
           <p>Director(s): {this.props.card.directors ? this.props.card.directors.join(' - ') : 'N/A'}</p>
           <p>Based On: {this.props.card.basedOn}</p>
+          <p>Stars: {this.props.card.stars.join(' - ')}</p>
+          <p>IMDB Rating: {this.props.card.imdbRating}</p>
           <a target="blank" href={this.props.card.link} >read the wiki</a>
         </article>
       : <article className='popup-container'>
           <p>Released: {this.props.card.publishDate}</p>
           <p>Characters: {this.props.card.characters.join(' - ')}</p>
-          <p>{this.props.card.writer}</p>
+          <p>Writers: {this.props.card.writers.join(' - ')}</p>
           <p>Letterers: {this.props.card.pencillers ? this.props.card.pencillers.join(' - ') : 'N/A'}</p>
           <p>Letterers: {this.props.card.letterers ? this.props.card.letterers : 'N/A'}</p>
           <p>Inkers: {this.props.card.inkers ? this.props.card.inkers.join(' - '): 'N/A'}</p>
@@ -63,6 +76,8 @@ export class Card extends Component {
            <img src={this.props.card.img} 
             alt={`${this.props.card.title}`} />
             {this.state.toggleInfo && cardInfo}
+            {this.stanLeeApproved() && <img src="https://media.customon.com/unsafe/600x600/img.customon.com/design/600/600/ffffff/40207/25b4041ed0a2418e9a95057a96ecd333.png.jpg" alt="Stan Lee Foto" className="stan-lee-approved" />}
+          
           </div>
           <div className="info-container">
               <h3>{this.props.card.title}</h3>

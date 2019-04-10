@@ -32,7 +32,6 @@ export default class Header extends Component {
           movies={this.props.movies}
           setSearchDataset={this.setSearchDataset}
           {...this.state}
-          setSearchDataset={this.setSearchDataset}
         />
       </header>
     )
