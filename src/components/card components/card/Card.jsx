@@ -32,7 +32,14 @@ export class Card extends Component {
   }
 
   stanLeeApproved = () => {
-
+    let approved;
+    if(this.props.card.writers && this.props.card.editors) {
+      approved = this.props.card.writers.concat(this.props.card.editors)
+        .includes('Stan Lee')
+          ? true
+          : false;
+    }
+    return approved;
   }
 
   render() {
@@ -69,7 +76,8 @@ export class Card extends Component {
            <img src={this.props.card.img} 
             alt={`${this.props.card.title}`} />
             {this.state.toggleInfo && cardInfo}
-          <img src="https://res.cloudinary.com/teepublic/image/private/s--YcnITvOD--/t_Preview/b_rgb:ffffff,c_limit,f_jpg,h_630,q_90,w_630/v1537454274/production/designs/3186319_0.jpg" alt="Stan Lee Foto" className="stan-lee-approved" />
+            {this.stanLeeApproved() && <img src="https://media.customon.com/unsafe/600x600/img.customon.com/design/600/600/ffffff/40207/25b4041ed0a2418e9a95057a96ecd333.png.jpg" alt="Stan Lee Foto" className="stan-lee-approved" />}
+          
           </div>
           <div className="info-container">
               <h3>{this.props.card.title}</h3>
