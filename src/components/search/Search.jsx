@@ -23,11 +23,11 @@ export class Search extends Component {
   increaseSearchCapability(card) {
     let container = [];
     const splitter = (person) => person.toUpperCase().split(' ');
-    if(card.directors) {
+    if (card.directors) {
       card.directors.forEach(person => container.push(...splitter(person)))
       card.stars.forEach(person => container.push(...splitter(person)))
       card.characters.forEach(person => container.push(...splitter(person)))
-    } else {
+    } else if (card.publishDate) {
       card.writers.forEach(person => container.push(...splitter(person)))
       card.characters.forEach(person => container.push(...splitter(person)))
       if (card.editors) {

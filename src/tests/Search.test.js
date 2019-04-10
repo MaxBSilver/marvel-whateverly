@@ -5,7 +5,20 @@ import { shallow } from 'enzyme';
 describe('Search', () => {
 
   const mockStoreRendered = jest.fn()
-
+  const mockCard = {
+    "title": "Captain Marvel",
+    "releaseYear": 2019,
+    "directors": ["Anna Boden", "Ryan Fleck"],
+    "rating": "PG13",
+    "stars": ["Brie Larson", "Samuel L. Jackson","Ben Mendelsohn", "Lee Pace", "Clark Gregg"],
+    "imdbRating": 7.2,
+    "characters": ["Captain Marvel", "Nick Fury", "Talos", "Korath", "Phil Coulson", "Ronan"],
+    "basedOn": ["Captain Marvel Vol. 7 #1"],
+    "link": "https://www.imdb.com/title/tt4154664/?ref_=nv_sr_1",
+    "img": "https://upload.wikimedia.org/wikipedia/en/8/85/Captain_Marvel_poster.jpg",
+    "id": 8,
+    "favorite": false
+  };
   const combined = [];
 
   let wrapper;
@@ -35,16 +48,23 @@ describe('Search', () => {
     expect(wrapper.state('value')).toEqual('iron man');
   });
 
-  it.skip('should search data based on parameter input', () => {
+  it('should search data based on parameter input', () => {
     let word = wrapper.instance().finder('POLLY')
     expect(word).toEqual( [{title: 'polly'}] );
   });
 
-  it.skip('should accept an input value on submit', () => {
+  it('should accept an input value on submit', () => {
     expect(wrapper.state('value')).toEqual('')
     wrapper.instance().handleChange( {target: {value: 'thor'}} )
     expect(wrapper.state('value')).toEqual('thor')
     wrapper.instance().handleSubmit( {preventDefault: () => {} })
     expect(mockStoreRendered).toHaveBeenCalled();
   });
+
+  it('should increase search capability', () => {
+    let result = wrapper.instance().increaseSearchCapability(mockCard)
+    expect(result).toEqual([
+      "ANNA", "BODEN", "RYAN", "FLECK", "BRIE", "LARSON", "SAMUEL", "L.", "JACKSON", "BEN", "MENDELSOHN", "LEE", "PACE", "CLARK", "GREGG", "CAPTAIN", "MARVEL", "NICK", "FURY", "TALOS", "KORATH", "PHIL", "COULSON", "RONAN",
+    ]);
+  })
 })
