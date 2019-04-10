@@ -5,11 +5,20 @@ import { shallow } from 'enzyme';
 describe('Filter', () => {
   
   const mockStoreRendered = jest.fn();
-
+  
   const mockSetSearchDataset = jest.fn();
   
   let wrapper;
-
+  let mockSortData = [
+    {mockNum: 5}, 
+    {mockNum: 4}, 
+    {mockNum: 3}, 
+    {mockNum: 6}, 
+    {mockNum: 7}, 
+    {mockNum: 1}, 
+    {mockNum: 2}
+  ]
+    
   let mockMovies = {
     "title": "Deadpool",
     "releaseYear": 2016,
@@ -45,7 +54,7 @@ describe('Filter', () => {
 
   beforeEach(() => {
     wrapper = shallow(
-      <Filter movies={mockMovies} comics={mockComics} storeRendered={mockStoreRendered} setSearchDataset={mockSetSearchDataset} />
+      <Filter movies={mockSortData} comics={mockComics} storeRendered={mockStoreRendered} setSearchDataset={mockSetSearchDataset} />
     )
   });
 
@@ -87,4 +96,17 @@ describe('Filter', () => {
     expect(wrapper.state()).toEqual( { comics: false, movies: false, favorites: false } );
   });
 
+  it('should sort cards based on option', () => {
+    wrapper.instance().setState({movies: true})
+    wrapper.instance().sortCards({target: {value: 'mockNum'}})
+    expect(mockStoreRendered).toHaveBeenCalledWith([
+      {mockNum: 7}, 
+      {mockNum: 6}, 
+      {mockNum: 5}, 
+      {mockNum: 4}, 
+      {mockNum: 3}, 
+      {mockNum: 2}, 
+      {mockNum: 1}
+    ])
+  })
 })

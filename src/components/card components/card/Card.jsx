@@ -59,7 +59,7 @@ export class Card extends Component {
           <p>Released: {this.props.card.publishDate}</p>
           <p>Characters: {this.props.card.characters.join(' - ')}</p>
           <p>Writers: {this.props.card.writers.join(' - ')}</p>
-          <p>Letterers: {this.props.card.pencillers ? this.props.card.pencillers.join(' - ') : 'N/A'}</p>
+          <p>Pencillers: {this.props.card.pencillers ? this.props.card.pencillers.join(' - ') : 'N/A'}</p>
           <p>Letterers: {this.props.card.letterers ? this.props.card.letterers : 'N/A'}</p>
           <p>Inkers: {this.props.card.inkers ? this.props.card.inkers.join(' - '): 'N/A'}</p>
           <p>Colorists: {this.props.card.colorists ? this.props.card.colorists.join(' - '): 'N/A'}</p>
