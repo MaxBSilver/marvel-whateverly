@@ -5,6 +5,8 @@
   font-family: $fancyfont;
   font-size: 1.5rem;
   margin: 1rem 0;
+  height:1.5em;
+  flex-wrap: wrap;
   text-transform: uppercase;
   transform: $btnSkew;
   &:hover {

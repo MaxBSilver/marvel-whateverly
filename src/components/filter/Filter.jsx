@@ -90,7 +90,7 @@ export class Filter extends Component {
       )
       default:
       return (
-      <form >
+      <form className="default-form">
         <input className="filter-btn" onClick={this.handleFavorites} type="submit" 
         value={this.state.favorites ? "Show Random": "Show Favorites"} id="comics"/>
         <input className="filter-btn" onClick={this.handleComics} type="submit" value="Comics" id="comics"/>

@@ -5,7 +5,12 @@
   display: flex;
   justify-content:center;
   height: 100%;
+  animation: fadeIn 1s 1;
   
+  @keyframes fadeIn {
+    0% { opacity: 0 }
+    100% { opacity: 1}
+  }
   img {
     height: 100%;
     // width: 100%;
@@ -42,6 +47,12 @@
     background-color: rgba(0, 0, 0, .7);
     width: 100%;
     z-index: 100;
+    animation: fadeIn 0.7s 1;
+  
+    @keyframes fadeIn {
+      0% { opacity: 0 }
+      100% { opacity: 1}
+    }
 
     p {
       font-family: $bodyfont;

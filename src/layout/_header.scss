@@ -1,9 +1,17 @@
 .Header form {
-  display: grid;
-  grid-template-areas: 'search searchBtn'
-  'comics movies';
-  height: 2.5rem;
+  // display: grid;
+  // grid-template-areas: 'search searchBtn' 'comics movies';
+  display: flex;
+  height: 3em;
   margin: auto auto;
   text-align: center;
-  width: 35%;
+}
+header {
+  display:flex;
+  flex-direction: column;
+}
+.default-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
