@@ -1,9 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Filter from '../components/filter/Filter';
 import { shallow } from 'enzyme';
 
 describe('Filter', () => {
+  
+  const mockStoreRendered = jest.fn();
+
+  const mockSetSearchDataset = jest.fn();
+  
   let wrapper;
 
   let mockMovies = {
@@ -41,7 +45,7 @@ describe('Filter', () => {
 
   beforeEach(() => {
     wrapper = shallow(
-      <Filter movies={mockMovies} comics={mockComics}/>
+      <Filter movies={mockMovies} comics={mockComics} storeRendered={mockStoreRendered} setSearchDataset={mockSetSearchDataset} />
     )
   });
 
@@ -54,10 +58,18 @@ describe('Filter', () => {
   });
 
   it.skip('should filter comics', () => {
-    const e = { target: { name: 'comics' } }
-    expect(wrapper.state()).toEqual( {comics:false, movies: false} )
-    wrapper.find('#comics').simulate('click', { preventDefault: () => { target: { value: "comics"} } } )
-    expect(wrapper.state()).toEqual( { comics:true, movies: false } )
+    expect(wrapper.state()).toEqual( { comics: false, movies: false, favorites: false } )
+    wrapper.setState( {comics: mockComics} )
+    wrapper.find('#comics').simulate('click')
+    // wrapper.instance().handleComics( {preventDefault: () => { target: {id: 'comics', value: 'Comics'} }} )
+    expect(wrapper.state()).toEqual( { comics: true, movies: false, favorites: false } );
+  });
+
+  it('should reset the search', () => {
+    wrapper.instance().resetSearch()
+    expect(mockSetSearchDataset).toHaveBeenCalled()
+    expect(mockStoreRendered).toHaveBeenCalled()
+    expect(wrapper.state()).toEqual( { comics: false, movies: false, favorites: false } );
   });
 
 })

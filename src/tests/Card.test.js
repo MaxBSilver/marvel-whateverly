@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Card from '../components/card components/card/Card';
 import { shallow } from 'enzyme';
 
@@ -32,7 +31,7 @@ describe('Card', () => {
   });
 
   it('should have a proper default state', () => {
-    expect(wrapper.state()).toEqual( {toggleInfo: false} );
+    expect(wrapper.state()).toEqual( {toggleInfo: false, favorited: false} );
   });
 
   it('should match the snapshot with all the info passed in', () => {
@@ -40,8 +39,16 @@ describe('Card', () => {
   });
 
   it('should toggle card info', () => {
-    expect(wrapper.state()).toEqual( {toggleInfo: false} )
+    expect(wrapper.state()).toEqual( {toggleInfo: false, favorited: false} )
     wrapper.instance().showCardInfo();
-    expect(wrapper.state()).toEqual( {toggleInfo: true} )
-  })
+    expect(wrapper.state()).toEqual( {toggleInfo: true, favorited: false} )
+  });
+
+  it('should toggle favorite', () => {
+    expect(wrapper.state()).toEqual( {toggleInfo: false, favorited: false} )
+    wrapper.instance().toggleFavorite()
+    expect(wrapper.state()).toEqual( {toggleInfo: false, favorited: true} )
+    wrapper.instance().toggleFavorite()
+    expect(wrapper.state()).toEqual( {toggleInfo: false, favorited: false} )
+  });
 })

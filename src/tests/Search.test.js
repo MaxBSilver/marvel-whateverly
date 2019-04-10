@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Search from '../components/search/Search';
 import { shallow } from 'enzyme';
 
@@ -32,7 +31,7 @@ describe('Search', () => {
 
   it('should handle input values change', () => {
     expect(wrapper.state('value')).toEqual('')
-    wrapper.instance().handleChange({target: {value: 'iron man'}})
+    wrapper.instance().handleChange( {target: {value: 'iron man'}} )
     expect(wrapper.state('value')).toEqual('iron man');
   });
 
@@ -43,7 +42,7 @@ describe('Search', () => {
 
   it('should accept an input value on submit', () => {
     expect(wrapper.state('value')).toEqual('')
-    wrapper.instance().handleChange({target: {value: 'thor'}})
+    wrapper.instance().handleChange( {target: {value: 'thor'}} )
     expect(wrapper.state('value')).toEqual('thor')
     wrapper.instance().handleSubmit( {preventDefault: () => {} })
     expect(mockStoreRendered).toHaveBeenCalled();
