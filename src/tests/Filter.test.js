@@ -57,12 +57,27 @@ describe('Filter', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it.skip('should filter comics', () => {
-    expect(wrapper.state()).toEqual( { comics: false, movies: false, favorites: false } )
+  it('should filter comics', () => {
     wrapper.setState( {comics: mockComics} )
-    wrapper.find('#comics').simulate('click')
-    // wrapper.instance().handleComics( {preventDefault: () => { target: {id: 'comics', value: 'Comics'} }} )
-    expect(wrapper.state()).toEqual( { comics: true, movies: false, favorites: false } );
+    wrapper.instance().handleComics( { target: {id: 'comics'}, preventDefault: () => {} } )
+    expect(wrapper.state('comics')).toEqual( false );
+    wrapper.instance().handleComics( { target: {id: 'comics'}, preventDefault: () => {} } )
+    expect(wrapper.state('comics')).toEqual( true );
+    expect(mockStoreRendered).toHaveBeenCalled();
+    expect(mockSetSearchDataset).toHaveBeenCalled();
+  });
+
+  it('should filter movies', () => {
+    expect(wrapper.state()).toEqual( { comics: false, movies: false, favorites: false } )
+    wrapper.setState( {comics: mockMovies} )
+    wrapper.instance().handleMovies( { target: {id: 'movies' }, preventDefault: () => {} } )
+    expect(wrapper.state()).toEqual( { comics: false, movies: true, favorites: false } );
+  });
+
+  it('should filter favorites', () => {
+    expect(wrapper.state()).toEqual( { comics: false, movies: false, favorites: false } )
+    wrapper.instance().handleFavorites( { target: {id: 'favorites' }, preventDefault: () => {} } )
+    expect(wrapper.state()).toEqual( { comics: false, movies: false, favorites: true } );
   });
 
   it('should reset the search', () => {
