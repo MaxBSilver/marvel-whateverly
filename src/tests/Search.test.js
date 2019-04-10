@@ -35,12 +35,12 @@ describe('Search', () => {
     expect(wrapper.state('value')).toEqual('iron man');
   });
 
-  it('should search data based on parameter input', () => {
+  it.skip('should search data based on parameter input', () => {
     let word = wrapper.instance().finder('POLLY')
     expect(word).toEqual( [{title: 'polly'}] );
   });
 
-  it('should accept an input value on submit', () => {
+  it.skip('should accept an input value on submit', () => {
     expect(wrapper.state('value')).toEqual('')
     wrapper.instance().handleChange( {target: {value: 'thor'}} )
     expect(wrapper.state('value')).toEqual('thor')

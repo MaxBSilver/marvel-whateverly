@@ -1,23 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Filter should match the snapshot with all the data passed in 1`] = `
-<form>
+<form
+  className="default-form"
+>
   <input
-    className="filter-btn filter-comics"
+    className="filter-btn"
     id="comics"
     onClick={[Function]}
     type="submit"
     value="Comics"
   />
   <input
-    className="filter-btn filter-movies"
+    className="filter-btn"
     id="movies"
     onClick={[Function]}
     type="submit"
     value="Movies"
   />
   <input
-    className="filter-btn filter-faves"
+    className="filter-btn"
     id="favorites"
     onClick={[Function]}
     type="submit"
