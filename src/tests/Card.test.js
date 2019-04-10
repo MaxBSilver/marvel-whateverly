@@ -51,5 +51,4 @@ describe('Card', () => {
     wrapper.instance().toggleFavorite()
     expect(wrapper.state()).toEqual( {toggleInfo: false, favorited: false} )
   });
-
 })
