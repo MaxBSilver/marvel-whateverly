@@ -3,25 +3,25 @@
 exports[`Filter should match the snapshot with all the data passed in 1`] = `
 <form>
   <input
-    className="filter-btn"
-    id="comics"
-    onClick={[Function]}
-    type="submit"
-    value="Show Favorites"
-  />
-  <input
-    className="filter-btn"
+    className="filter-btn filter-comics"
     id="comics"
     onClick={[Function]}
     type="submit"
     value="Comics"
   />
   <input
-    className="filter-btn"
+    className="filter-btn filter-movies"
     id="movies"
     onClick={[Function]}
     type="submit"
     value="Movies"
+  />
+  <input
+    className="filter-btn filter-faves"
+    id="favorites"
+    onClick={[Function]}
+    type="submit"
+    value="Show Favorites"
   />
 </form>
 `;

@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardContainer should match the snapshot with all the data passed in 1`] = `
+<section
+  className="card-container"
+>
+  <Card
+    card={
+      Object {
+        "basedOn": Array [
+          "Ultimate Spider-Man",
+        ],
+        "characters": Array [
+          "Spider-Man",
+          "Iron Man",
+          "Vulture",
+        ],
+        "directors": Array [
+          "Jon Watts",
+        ],
+        "favorite": false,
+        "id": 9,
+        "imdbRating": 7.5,
+        "img": "https://vignette.wikia.nocookie.net/marveldatabase/images/4/4f/Spider-Man_Homecoming_poster_004.jpg/revision/latest?cb=20170524085936",
+        "link": "https://www.imdb.com/title/tt2250912/?ref_=nv_sr_2",
+        "rating": "PG13",
+        "releaseYear": 2017,
+        "stars": Array [
+          "Tom Holland",
+          "Michael Keaton",
+          "Jon Favreau",
+          "Donald Glover",
+          "Robert Downey Jr.",
+        ],
+        "title": "Spider-Man: Homecoming",
+      }
+    }
+    key="9"
+  />
+  <Card
+    card={
+      Object {
+        "adapted": false,
+        "characters": Array [
+          "Scarlet Witch",
+          "Quicksilver",
+          "Magneto",
+          "Professor Xavier",
+          "Captain America",
+          "Emma Frost",
+          "Doctor Strange",
+        ],
+        "colorists": Array [
+          "Frank D'Armata",
+        ],
+        "editors": null,
+        "favorite": false,
+        "id": 16,
+        "img": "https://vignette.wikia.nocookie.net/marveldatabase/images/6/67/Family_Magnus_%28Earth-58163%29_from_House_of_M_Vol_1_6_001.jpg/revision/latest/scale-to-width-down/700?cb=20061206101145",
+        "inkers": Array [
+          "Tim Townsend",
+        ],
+        "letterers": null,
+        "link": "https://marvel.fandom.com/wiki/Earth-58163",
+        "pencillers": Array [
+          "Oliver Coipel",
+        ],
+        "publishDate": 2005,
+        "summary": "Mutant Scarlet Witch suffers a breakdown and cannot control her powers. The Avengers quarrel on how to help her, some of them think there is no other way than to kill her, while others think they could control her magic. When they try to talk to her, she alters the reality of Earth and the lives of the heroes in it.",
+        "title": "House of M",
+        "writers": Array [
+          "Brian Michael Bendis",
+        ],
+      }
+    }
+    key="16"
+  />
+</section>
+`;

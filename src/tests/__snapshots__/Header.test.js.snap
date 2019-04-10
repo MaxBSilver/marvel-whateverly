@@ -4,7 +4,9 @@ exports[`Header should pass the snapshot with all the data passed in 1`] = `
 <header
   className="Header"
 >
-  <Search />
+  <Search
+    searchThisDataset={null}
+  />
   <Filter
     searchThisDataset={null}
     setSearchDataset={[Function]}
