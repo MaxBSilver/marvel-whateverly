@@ -20,6 +20,23 @@ export class Search extends Component {
     }).join('')
   }
 
+  increaseSearchCapability(card) {
+    let container = [];
+    const splitter = (person) => person.toUpperCase().split(' ');
+    if(card.directors) {
+      card.directors.forEach(person => container.push(...splitter(person)))
+      card.stars.forEach(person => container.push(...splitter(person)))
+      card.characters.forEach(person => container.push(...splitter(person)))
+    } else {
+      card.writers.forEach(person => container.push(...splitter(person)))
+      card.characters.forEach(person => container.push(...splitter(person)))
+      if (card.editors) {
+        card.editors.forEach(person => container.push(...splitter(person)))
+      }
+    }
+    return container;
+  }
+
   finder(words) {
     let searchHere = this.props.searchThisDataset || this.props.data
     return searchHere.filter((item) => { 
@@ -27,7 +44,9 @@ export class Search extends Component {
           acc.push(this.rmSpecChars(word))
         return acc;
       }, [])
-      return reduced.some(keyWord => words.includes(keyWord));
+      let additionalSearch = this.increaseSearchCapability(item)
+      console.log(reduced.concat(additionalSearch))
+      return reduced.concat(additionalSearch).some(keyWord => words.includes(keyWord));
    })
   }
 

@@ -31,6 +31,10 @@ export class Card extends Component {
     return aFavorite;
   }
 
+  stanLeeApproved = () => {
+
+  }
+
   render() {
     const cardInfo = 
     this.props.card.imdbRating
@@ -40,12 +44,14 @@ export class Card extends Component {
           <p>{this.props.card.writer}</p>
           <p>Director(s): {this.props.card.directors ? this.props.card.directors.join(' - ') : 'N/A'}</p>
           <p>Based On: {this.props.card.basedOn}</p>
+          <p>Stars: {this.props.card.stars.join(' - ')}</p>
+          <p>IMDB Rating: {this.props.card.imdbRating}</p>
           <a target="blank" href={this.props.card.link} >read the wiki</a>
         </article>
       : <article className='popup-container'>
           <p>Released: {this.props.card.publishDate}</p>
           <p>Characters: {this.props.card.characters.join(' - ')}</p>
-          <p>{this.props.card.writer}</p>
+          <p>Writers: {this.props.card.writers.join(' - ')}</p>
           <p>Letterers: {this.props.card.pencillers ? this.props.card.pencillers.join(' - ') : 'N/A'}</p>
           <p>Letterers: {this.props.card.letterers ? this.props.card.letterers : 'N/A'}</p>
           <p>Inkers: {this.props.card.inkers ? this.props.card.inkers.join(' - '): 'N/A'}</p>
@@ -63,6 +69,7 @@ export class Card extends Component {
            <img src={this.props.card.img} 
             alt={`${this.props.card.title}`} />
             {this.state.toggleInfo && cardInfo}
+          <img src="https://res.cloudinary.com/teepublic/image/private/s--YcnITvOD--/t_Preview/b_rgb:ffffff,c_limit,f_jpg,h_630,q_90,w_630/v1537454274/production/designs/3186319_0.jpg" alt="Stan Lee Foto" className="stan-lee-approved" />
           </div>
           <div className="info-container">
               <h3>{this.props.card.title}</h3>
