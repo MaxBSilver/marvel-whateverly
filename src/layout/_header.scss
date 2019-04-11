@@ -1,13 +1,11 @@
 .Header form {
-  // display: grid;
-  // grid-template-areas: 'search searchBtn' 'comics movies';
   display: flex;
   height: 3em;
   margin: auto auto;
   text-align: center;
 }
 header {
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 .default-form {
