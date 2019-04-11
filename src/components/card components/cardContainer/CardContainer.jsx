@@ -9,7 +9,10 @@ export class CardContainer extends Component {
   }
 
   render() {
-      return (
+    return  this.props.rendered === null ?
+    <div></div>
+    :
+      (
         <section className='card-container'>
           { this.props.rendered.map(card => 
           <Card  
