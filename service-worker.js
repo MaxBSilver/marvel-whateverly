@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/MaxBSilver/marvel-whateverly/precache-manifest.088233b2ed6c47fff5663a9f731ff376.js"
+  "/marvel-whateverly/precache-manifest.b1173cc517b6ebc3aadd0cbcb7852f80.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/MaxBSilver/marvel-whateverly/index.html", {
+workbox.routing.registerNavigationRoute("/marvel-whateverly/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
