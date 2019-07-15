@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "fc52f6a0173ac44128b5",
-    "url": "/marvel-whateverly/static/css/main.60d9268e.chunk.css"
+    "revision": "c98c93dcc160d875a500",
+    "url": "/marvel-whateverly/static/css/main.f7081ebf.chunk.css"
   },
   {
-    "revision": "fc52f6a0173ac44128b5",
-    "url": "/marvel-whateverly/static/js/main.02d8a4c9.chunk.js"
+    "revision": "c98c93dcc160d875a500",
+    "url": "/marvel-whateverly/static/js/main.c2940ec8.chunk.js"
   },
   {
     "revision": "01d26feaffc568d18ef3",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/marvel-whateverly/static/js/2.a5adb38c.chunk.js"
   },
   {
-    "revision": "1d3f9b40f756be6c410b5e17ed536a01",
+    "revision": "1509a84ef2ae77e2e65fc4b3d1a385d8",
     "url": "/marvel-whateverly/index.html"
   }
 ];
